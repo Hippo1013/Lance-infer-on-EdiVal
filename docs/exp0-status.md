@@ -49,7 +49,7 @@ monitor/watchdog保持原状；不能根据一项任务推定另一卡空闲。h
 
 2026-10-05核对：MICE manifest的17个冻结文件在服务器与本地均匹配；EdiVal的24个冻结文件在runtime中全部匹配。当前本地 `scoring_qwen_once.py` 已迭代为评分v3，与EdiVal启动时冻结的旧版不同；该文件仍保留在runtime，不能为了目录一致改写它。
 
-核对时服务器共享目录缺19个EdiVal文件；本次同步5个说明/验收文件后，仍有14个源码、配置、测试与页面文件留在独立runtime。另有4个源码/包配置差异：`pyproject.toml`、`src/lance_mice/dataset.py`、`src/lance_mice/runner.py`、`src/lance_mice/settings.py`。EdiVal入口、查看器和验收证据已在独立runtime；运行正常不需要覆盖共享目录。文档可单独同步，共享源码及runtime在活动任务结束前保持冻结。未来统一部署须先确认两项终态、进程退出与改动，再逐文件核对来源和哈希；不能直接全目录rsync或切换活动源码。
+核对时服务器共享目录缺19个EdiVal文件；本次同步5个说明/验收文件后，仍有14个源码、配置、测试与页面文件未合并。其中12个运行文件已在独立runtime，2个测试文件只在本地开发仓库。另有4个源码/包配置差异：`pyproject.toml`、`src/lance_mice/dataset.py`、`src/lance_mice/runner.py`、`src/lance_mice/settings.py`。EdiVal入口、查看器和验收证据已在独立runtime；运行正常不需要覆盖共享目录。文档可单独同步，共享源码及runtime在活动任务结束前保持冻结。未来统一部署须先确认两项终态、进程退出与改动，再逐文件核对来源和哈希；不能直接全目录rsync或切换活动源码。
 
 ## 结果入口与后续顺序
 
