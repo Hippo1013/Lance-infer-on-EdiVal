@@ -1,0 +1,368 @@
+{
+  "run_fingerprint": "11938d059c3ca5e54b69cf824f91e9a7ec51adfc488f38710d03e0870f7b79b0",
+  "sessions": {
+    "edival/12": {
+      "en": [
+        "Remove glass white streetlight",
+        "Change the material of metal gray street pole to wood",
+        "\"Change the count of painted multicolor bus to 4\""
+      ],
+      "zh": [
+        "移除白色玻璃路灯",
+        "将灰色金属街杆的材质改为木材",
+        "“将彩绘多色公交车的数量改为4辆”"
+      ]
+    },
+    "edival/19": {
+      "en": [
+        "Change the count of plastic yellow minion figure to 5",
+        "\"Change the position of plastic yellow minion figure to above of plastic red and white lifebuoy\"",
+        "Add beach umbrella on the above of plastic yellow minion figure"
+      ],
+      "zh": [
+        "将黄色塑料小黄人玩偶的数量改为5个",
+        "“将黄色塑料小黄人玩偶移到红白色塑料救生圈上方”",
+        "在黄色塑料小黄人玩偶上方添加沙滩伞"
+      ]
+    },
+    "edival/31": {
+      "en": [
+        "Change the color of black suit jacket to gray",
+        "Remove gray suit jacket",
+        "Change the background to ballroom, remain the black shirt, black tie, metal chain necklace unchanged"
+      ],
+      "zh": [
+        "将黑色西装外套改为灰色",
+        "移除灰色西装外套",
+        "将背景改为舞厅，保持黑色衬衫、黑色领带和金属链条项链不变"
+      ]
+    },
+    "edival/45": {
+      "en": [
+        "Change the material of wool navy blue jacket to leather",
+        "Change the count of fabric red plume to 4",
+        "Add flag on the left of fabric white sash"
+      ],
+      "zh": [
+        "将藏蓝色羊毛夹克的材质改为皮革",
+        "将红色布质羽饰的数量改为4个",
+        "在白色布质绶带左侧添加旗帜"
+      ]
+    },
+    "edival/49": {
+      "en": [
+        "Change the material of wooden brown log to stone",
+        "Change the color of fur white bear to brown",
+        "Add bird on the above of stone brown log"
+      ],
+      "zh": [
+        "将棕色木质原木的材质改为石材",
+        "将白色毛皮熊改为棕色",
+        "在棕色石质原木上方添加一只鸟"
+      ]
+    },
+    "edival/76": {
+      "en": [
+        "Change the background to garden, remain the fabric beige dress, woven tan chair, metal silver phone unchanged",
+        "Change the color of woven tan chair to gray",
+        "Change the material of gray woven tan chair to metal"
+      ],
+      "zh": [
+        "将背景改为花园，保持米色布质连衣裙、棕褐色编织椅子和银色金属手机不变",
+        "将棕褐色编织椅子的颜色改为灰色",
+        "将灰色编织的棕褐色椅子的材质改为金属"
+      ]
+    },
+    "edival/86": {
+      "en": [
+        "Remove metal black desk lamp",
+        "Replace fabric yellow teddy bear sculpture with lamp post",
+        "Change the background to museum, remain the lamp post unchanged"
+      ],
+      "zh": [
+        "移除黑色金属台灯",
+        "将黄色布质泰迪熊雕塑替换为灯柱",
+        "将背景改为博物馆，保持灯柱不变"
+      ]
+    },
+    "edival/93": {
+      "en": [
+        "\"Change the count of pink plastic handbag to 5\"",
+        "Change the color of blue fabric dress to purple",
+        "Replace pink fabric skirt with apron"
+      ],
+      "zh": [
+        "“将粉色塑料手提包的数量改为5个”",
+        "将蓝色布质连衣裙改为紫色",
+        "将粉色布质裙子替换为围裙"
+      ]
+    },
+    "edival/106": {
+      "en": [
+        "Add text 'MAGIC' on the image",
+        "Change the position of purple butterfly to above of metallic blue dress.",
+        "Change the color of metallic blue gloves to purple"
+      ],
+      "zh": [
+        "在图像上添加文字 'MAGIC'",
+        "将紫色蝴蝶移到金属蓝色连衣裙上方。",
+        "将金属蓝色手套改为紫色"
+      ]
+    },
+    "edival/150": {
+      "en": [
+        "Replace metal fence with hedge",
+        "Change the material of white shoes to \"leather\"",
+        "Change the position of concrete bench to below of cotton white shirt."
+      ],
+      "zh": [
+        "将金属围栏替换为绿篱",
+        "将白色鞋子的材质改为“皮革”",
+        "将混凝土长椅移到白色棉质衬衫下方。"
+      ]
+    },
+    "edival/186": {
+      "en": [
+        "Remove plastic black cap",
+        "Change the background to park, remain the cotton blue shirt, cotton white undershirt, denim blue pants unchanged",
+        "\"Change the position of cotton blue shirt to above of denim blue pants\""
+      ],
+      "zh": [
+        "移除黑色塑料帽子",
+        "将背景改为公园，保持蓝色棉质衬衫、白色棉质汗衫和蓝色牛仔裤不变",
+        "“将蓝色棉质衬衫移到蓝色牛仔裤上方”"
+      ]
+    },
+    "edival/207": {
+      "en": [
+        "Change the background to office, remain the black blazer, black shirt unchanged",
+        "Change the color of black shirt to blue",
+        "Remove blue shirt"
+      ],
+      "zh": [
+        "将背景改为办公室，保持黑色西装外套和黑色衬衫不变",
+        "将黑色衬衫改为蓝色",
+        "移除蓝色衬衫"
+      ]
+    },
+    "edival/244": {
+      "en": [
+        "Change the count of fur black bear to 5.",
+        "Change the color of fur black cub to brown",
+        "Remove fur brown cub"
+      ],
+      "zh": [
+        "将黑色毛皮熊的数量改为5只。",
+        "将黑色毛皮熊幼崽改为棕色",
+        "移除棕色毛皮熊幼崽"
+      ]
+    },
+    "edival/245": {
+      "en": [
+        "\"Change the position of ceramic white bottle to above of gray stone pedestal\"",
+        "Change the color of ceramic blue and white vase to green",
+        "Change the material of ceramic beige statue to bronze"
+      ],
+      "zh": [
+        "“将白色陶瓷瓶移到灰色石质底座上方”",
+        "将蓝白色陶瓷花瓶改为绿色",
+        "将米色陶瓷雕像的材质改为青铜"
+      ]
+    },
+    "edival/249": {
+      "en": [
+        "Replace fabric brown and white cat with decorative pumpkin",
+        "Add candle on the above of ceramic white pumpkin",
+        "Change the material of ceramic orange pumpkin to fabric"
+      ],
+      "zh": [
+        "将棕白色布质猫替换为装饰南瓜",
+        "在白色陶瓷南瓜上方添加蜡烛",
+        "将橙色陶瓷南瓜的材质改为布料"
+      ]
+    },
+    "edival/250": {
+      "en": [
+        "Replace cotton yellow sleeve with sweater",
+        "Change the color of sweater to blue",
+        "Add text 'FAMILY' on the image"
+      ],
+      "zh": [
+        "将黄色棉质衣袖替换为毛衣",
+        "将毛衣改为蓝色",
+        "在图像上添加文字 'FAMILY'"
+      ]
+    },
+    "edival/318": {
+      "en": [
+        "Add volcano on the below of smoke plume",
+        "\"Change the count of plush white cat toy to 3\"",
+        "\"Change the position of plush white cat toy to below of wooden platform\""
+      ],
+      "zh": [
+        "在烟柱下方添加火山",
+        "“将白色毛绒猫玩具的数量改为3个”",
+        "“将白色毛绒猫玩具移到木质平台下方”"
+      ]
+    },
+    "edival/362": {
+      "en": [
+        "\"Change the count of ceramic white plate to 3\"",
+        "Change the color of ceramic white plate to blue",
+        "Change the material of ceramic white and red plate to glass"
+      ],
+      "zh": [
+        "“将白色陶瓷盘子的数量改为3个”",
+        "将白色陶瓷盘子改为蓝色",
+        "将白红色陶瓷盘子的材质改为玻璃"
+      ]
+    },
+    "edival/365": {
+      "en": [
+        "Remove striped black and white zebra",
+        "Add waterhole",
+        "Change the background to savanna, remain the waterhole unchanged"
+      ],
+      "zh": [
+        "移除黑白条纹斑马",
+        "添加水坑",
+        "将背景改为稀树草原，保持水坑不变"
+      ]
+    },
+    "edival/372": {
+      "en": [
+        "Add text 'CACTUS' on the image",
+        "Remove cotton purple shirt",
+        "\"Change the count of cotton black jacket to 3\""
+      ],
+      "zh": [
+        "在图像上添加文字 'CACTUS'",
+        "移除紫色棉质衬衫",
+        "“将黑色棉质夹克的数量改为3件”"
+      ]
+    },
+    "edival/375": {
+      "en": [
+        "Change the color of leather brown backpack to blue",
+        "Change the count of leather blue backpack to 4",
+        "Add text 'MOON' on the image"
+      ],
+      "zh": [
+        "将棕色皮革背包改为蓝色",
+        "将蓝色皮革背包的数量改为4个",
+        "在图像上添加文字 'MOON'"
+      ]
+    },
+    "edival/380": {
+      "en": [
+        "Change the position of plastic white bottle to below of stone archway.",
+        "Replace stone archway with pagoda",
+        "Remove cotton pink dress"
+      ],
+      "zh": [
+        "将白色塑料瓶移到石质拱门下方。",
+        "将石质拱门替换为宝塔",
+        "移除粉色棉质连衣裙"
+      ]
+    },
+    "edival/383": {
+      "en": [
+        "Change the material of wooden brown chair to metal",
+        "Remove cotton black and white checkered top",
+        "Change the color of metal brown chair to black"
+      ],
+      "zh": [
+        "将棕色木质椅子的材质改为金属",
+        "移除黑白格纹棉质上衣",
+        "将棕色金属椅子改为黑色"
+      ]
+    },
+    "edival/450": {
+      "en": [
+        "Change the background to castle, remain the metal gold crown unchanged",
+        "Change the material of metal gold crown to plastic",
+        "Change the color of plastic gold crown to blue"
+      ],
+      "zh": [
+        "将背景改为城堡，保持金色金属王冠不变",
+        "将金色金属王冠的材质改为塑料",
+        "将金色塑料王冠改为蓝色"
+      ]
+    },
+    "edival/458": {
+      "en": [
+        "Change the material of plastic white headphones to metal",
+        "Add text 'JOY' on the image",
+        "Change the count of metal white headphones to 3"
+      ],
+      "zh": [
+        "将白色塑料耳机的材质改为金属",
+        "在图像上添加文字 'JOY'",
+        "将白色金属耳机的数量改为3个"
+      ]
+    },
+    "edival/461": {
+      "en": [
+        "Change the color of cotton white shirt to orange",
+        "Add text 'LEARN' on the image",
+        "Change the material of paper notebook to leather"
+      ],
+      "zh": [
+        "将白色棉质衬衫改为橙色",
+        "在图像上添加文字 'LEARN'",
+        "将纸质笔记本的材质改为皮革"
+      ]
+    },
+    "edival/483": {
+      "en": [
+        "Change the count of plastic clear elevator buttons to 3",
+        "\"Change the position of human skin hand to below of plastic clear elevator buttons\"",
+        "Remove human skin hand"
+      ],
+      "zh": [
+        "将透明塑料电梯按钮的数量改为3个",
+        "“将人类皮肤的手移到透明塑料电梯按钮下方”",
+        "移除人类皮肤的手"
+      ]
+    },
+    "edival/498": {
+      "en": [
+        "Change the color of wooden white floor to gray",
+        "Add plant on the right of wooden black frame",
+        "Change the position of plant to left of wooden black frame."
+      ],
+      "zh": [
+        "将白色木质地板改为灰色",
+        "在黑色木质框架右侧添加植物",
+        "将植物移到黑色木质框架左侧。"
+      ]
+    },
+    "edival/526": {
+      "en": [
+        "Remove red hearts",
+        "Add pen",
+        "\"Change the count of pen to 4\""
+      ],
+      "zh": [
+        "移除红色爱心",
+        "添加钢笔",
+        "“将钢笔的数量改为4支”"
+      ]
+    },
+    "edival/605": {
+      "en": [
+        "Change the background to playground, remain the cotton white shirt, fabric black skirt, plastic orange traffic cone, fabric white sock, fabric black sock, leather black shoe unchanged",
+        "Replace leather black shoe with sneaker",
+        "Change the position of plastic orange traffic cone to below of fabric black skirt."
+      ],
+      "zh": [
+        "将背景改为游乐场，保持白色棉质衬衫、黑色布质裙子、橙色塑料交通锥、白色布质袜子、黑色布质袜子和黑色皮革鞋不变",
+        "将黑色皮革鞋替换为运动鞋",
+        "将橙色塑料交通锥移到黑色布质裙子下方。"
+      ]
+    }
+  },
+  "selection_seed": 20261005,
+  "selection_scope": "30 uniformly sampled sessions for auxiliary Chinese review; the browser includes all 572 sessions",
+  "note": "原始英文保留；翻译不修正原始指令的矛盾或歧义，不作为模型输入。"
+}

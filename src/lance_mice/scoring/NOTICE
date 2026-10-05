@@ -1,0 +1,11 @@
+Source: https://github.com/yuxiaooye/Edit-R2
+Commit: 26b55829246e1a67fc3c8d522324fee3d49cd954
+Authors: Edit-R2 contributors. No LICENSE file found at this revision; no license is asserted for upstream portions. Retained for benchmark protocol inspection and execution, with original provenance; no additional license is asserted.
+if_rules.py: selected IF rules from rewards/reward_server/edival_reward_server.py, with injected callbacks, debug prints removed and exceptions propagated.
+prompts.py: two GA prompt strings from flow_grpo/edival_client.py, unchanged.
+Detection and CC adapters follow the same source and groundingdino_server.py; explicit deviations documented in docs/scoring-protocol.md.
+{
+  "rewards/reward_server/edival_reward_server.py": "7d769b185431dce7298f7a535aed35ccafcfb25e8f10b5a755ed55968b2fd43b",
+  "flow_grpo/edival_client.py": "528b2f11d5f3bd17538d40a71ceafb00e3f901d3dabf1084779ba9e9bbd16702",
+  "rewards/reward_server/groundingdino_server.py": "32e78355bf054da76fede0350bee3edd82cbfeb02ec26abc875c6f9ab502b399"
+}

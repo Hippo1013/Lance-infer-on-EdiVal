@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lance-mice"
+version = "0.1.0"
+description = "Full-history MICE, ImgEdit and EdiVal inference with a custom vLLM-Omni Lance pipeline"
+requires-python = ">=3.12,<3.14"
+dependencies = ["Pillow>=11,<13", "numpy>=1.26,<3"]
+
+[project.scripts]
+lance-mice = "lance_mice.runner:main"
+lance-imgedit = "lance_mice.imgedit:main"
+lance-edival = "lance_mice.edival:main"
+lance-mice-acceptance = "lance_mice.acceptance:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

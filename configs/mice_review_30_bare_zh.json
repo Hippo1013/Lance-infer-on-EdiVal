@@ -1,0 +1,395 @@
+{
+  "note": "无标签完整历史重跑结果的浏览翻译；仅供展示，保留原始指代与指定文字。",
+  "sessions": {
+    "cm/009e412e4d25ec57": {
+      "fingerprint": "38cace4e310605c0f68ec68466526582cdf1cc2802ebdc4d17b47d6f3466a4a9",
+      "en": [
+        "Set a persistent rule for all following edits: orange color must be applied exclusively to the specific object being directly added or modified — do not colorize the background, surrounding elements, or any untouched area. With this rule active, Change the background to tent, remain the fleece green jacket, cotton camouflage pants, cotton camouflage cap, suede tan boots, nylon black strap, fabric black gloves, cotton camouflage jacket unchanged",
+        "Change the material of nylon black strap to leather",
+        "Remove suede tan boots"
+      ],
+      "zh": [
+        "为此后的所有编辑设定一条持续规则：只对当前直接添加或修改的具体物体使用橙色，不要给背景、周围元素或任何未编辑区域着色。在这条规则下，将背景改为帐篷，保持绿色抓绒夹克、棉质迷彩裤、棉质迷彩帽、棕褐色绒面革靴子、黑色尼龙带、黑色织物手套和棉质迷彩夹克不变。",
+        "将黑色尼龙带的材质改为皮革。",
+        "移除棕褐色绒面革靴子。"
+      ]
+    },
+    "cm/01f5a9dceba829c0": {
+      "fingerprint": "62d13ba4b439f5c8c4ef1af3fe853b5a3dfbf69ebaca7e7a7a99fbd0f5494d9e",
+      "en": [
+        "Apply a standing constraint to all subsequent edits: only the object directly involved in each edit should receive blue color — the background, surrounding objects, and any area not explicitly edited must remain unaffected. With this rule active, Change the background to kitchen, remain the fabric blue scarf, fabric black top, fabric white cardigan, fabric black and white shirt, glass glass, glass blue bottle, plastic white watch, metal black earring unchanged",
+        "Change the count of glass glass to 2",
+        "Change the material of glass blue bottle to plastic"
+      ],
+      "zh": [
+        "为后续所有编辑设定一条持续约束：只有每次编辑直接涉及的物体才应被赋予蓝色；背景、周围物体和任何未明确编辑的区域都必须保持不受影响。在这条规则下，将背景改为厨房，保持蓝色织物围巾、黑色织物上衣、白色织物开衫、黑白色织物衬衫、玻璃杯、蓝色玻璃瓶、白色塑料手表和黑色金属耳环不变。",
+        "将玻璃杯的数量改为 2 个。",
+        "将蓝色玻璃瓶的材质改为塑料。"
+      ]
+    },
+    "cm/0279d5671c3214e5": {
+      "fingerprint": "12f49cbb94f155d946327236ab97af1c140bc67d889ed03c0209d78ca6dcd6f6",
+      "en": [
+        "Set a persistent rule for all following edits: red color must be applied exclusively to the specific object being directly added or modified — do not colorize the background, surrounding elements, or any untouched area. With this rule active, Change the background to curtain, remain the wool grey scarf, plastic black glasses unchanged",
+        "Remove wool grey scarf",
+        "Change the material of plastic black glasses to metal"
+      ],
+      "zh": [
+        "为此后的所有编辑设定一条持续规则：只对当前直接添加或修改的具体物体使用红色，不要给背景、周围元素或任何未编辑区域着色。在这条规则下，将背景改为窗帘，保持灰色羊毛围巾和黑色塑料眼镜不变。",
+        "移除灰色羊毛围巾。",
+        "将黑色塑料眼镜的材质改为金属。"
+      ]
+    },
+    "cm/02c20672e76cb8f2": {
+      "fingerprint": "11985c5856eda82e268d010579f0bdb0d2de41f29262784acd671ff38b6d15a9",
+      "en": [
+        "Apply a standing constraint to all subsequent edits: only the object directly involved in each edit should be given dirt material — the surrounding objects, background, and any area not explicitly edited must keep their original material. With this rule active, Replace paper white cigarette with pencil",
+        "Change the color of pencil to yellow",
+        "Remove yellow pencil"
+      ],
+      "zh": [
+        "为后续所有编辑设定一条持续约束：只有每次编辑直接涉及的物体才应被赋予泥土材质；周围物体、背景和任何未明确编辑的区域都必须保持原有材质。在这条规则下，将白色纸质香烟替换为铅笔。",
+        "将铅笔的颜色改为黄色。",
+        "移除黄色铅笔。"
+      ]
+    },
+    "cm/030901e7937c3fe8": {
+      "fingerprint": "f7efa4f5cb81543b03cd2c4c270b5f6a26e995c0f0b31e47b3080e4cd63c80e7",
+      "en": [
+        "Apply a standing constraint to all subsequent edits: only the object directly involved in each edit should receive black color — the background, surrounding objects, and any area not explicitly edited must remain unaffected. With this rule active, Change the count of wood brown tree trunk to 2",
+        "Change the background to curtain, remain the brown giraffe, wood brown tree trunk unchanged",
+        "Remove wood brown tree trunk"
+      ],
+      "zh": [
+        "为后续所有编辑设定一条持续约束：只有每次编辑直接涉及的物体才应被赋予黑色；背景、周围物体和任何未明确编辑的区域都必须保持不受影响。在这条规则下，将棕色木质树干的数量改为 2 根。",
+        "将背景改为窗帘，保持棕色长颈鹿和棕色木质树干不变。",
+        "移除棕色木质树干。"
+      ]
+    },
+    "cm/035ddba98849c8be": {
+      "fingerprint": "a98c2146ea74474d9054833d3edf1dd75980a4a7349986ed1f3a43013cfad9ad",
+      "en": [
+        "Set a persistent rule for all following edits: peach color must be applied exclusively to the specific object being directly added or modified — do not colorize the background, surrounding elements, or any untouched area. With this rule active, Remove pink flower",
+        "Change the position of yellow and black bee to right of green stem",
+        "Replace green stem with rib"
+      ],
+      "zh": [
+        "为此后的所有编辑设定一条持续规则：只对当前直接添加或修改的具体物体使用桃色，不要给背景、周围元素或任何未编辑区域着色。在这条规则下，移除粉色花朵。",
+        "将黄黑色蜜蜂移到绿色茎的右侧。",
+        "将绿色茎替换为肋骨。"
+      ]
+    },
+    "cm/03b629c41bdcfa44": {
+      "fingerprint": "aac93b6316f9d60063def813e93526a6b801ba1f2d628c68cbff3fcef94ba011",
+      "en": [
+        "Apply a standing constraint to all subsequent edits: only the object directly involved in each edit should be given velvet material — the surrounding objects, background, and any area not explicitly edited must keep their original material. With this rule active, Add crown on the above of plastic red wall sign",
+        "Replace the text 'Tarbell REALTORS Preferred PROPERTIES TM' on plastic red wall sign with 'Dream'",
+        "Change the background to library, remain the crown unchanged"
+      ],
+      "zh": [
+        "为后续所有编辑设定一条持续约束：只有每次编辑直接涉及的物体才应被赋予天鹅绒材质；周围物体、背景和任何未明确编辑的区域都必须保持原有材质。在这条规则下，在红色塑料墙牌上方添加一顶王冠。",
+        "将红色塑料墙牌上的文字 'Tarbell REALTORS Preferred PROPERTIES TM' 替换为 'Dream'。",
+        "将背景改为图书馆，保持王冠不变。"
+      ]
+    },
+    "cm/053cd00cd6867ce5": {
+      "fingerprint": "6ad3b91aacc4df816dd2b4fb6d49961a04cd97ebf5d4af0c94510c2943296c0b",
+      "en": [
+        "Apply a standing constraint to all subsequent edits: only the object directly involved in each edit should receive orange color — the background, surrounding objects, and any area not explicitly edited must remain unaffected. With this rule active, Change the background to stadium, remain the blue suit jacket, black suit jacket, cotton white shirt, blue tie, metal glasses, black microphone, white sign, metal silver pen, glass cup unchanged",
+        "Add mug on the right of black microphone",
+        "Change the position of mug to right of glass cup"
+      ],
+      "zh": [
+        "为后续所有编辑设定一条持续约束：只有每次编辑直接涉及的物体才应被赋予橙色；背景、周围物体和任何未明确编辑的区域都必须保持不受影响。在这条规则下，将背景改为体育场，保持蓝色西装外套、黑色西装外套、白色棉质衬衫、蓝色领带、金属眼镜、黑色麦克风、白色标牌、银色金属笔和玻璃杯不变。",
+        "在黑色麦克风右侧添加一个马克杯。",
+        "将马克杯移到玻璃杯右侧。"
+      ]
+    },
+    "cm/063553589db11878": {
+      "fingerprint": "309452ae366a3a9eeea0ba5fd2a43c788dd89e3d56a037da9019425b61296a26",
+      "en": [
+        "Set a persistent rule for all following edits: fleece material must be applied exclusively to the specific object being directly added or modified — do not change the texture, material, or appearance of any surrounding or unrelated objects. With this rule active, Change the count of black wipers to 4",
+        "Remove rubber black tire",
+        "Change the position of glass windshield to below of metal silver wheel"
+      ],
+      "zh": [
+        "为此后的所有编辑设定一条持续规则：只对当前直接添加或修改的具体物体使用抓绒材质，不要改变周围或无关物体的纹理、材质或外观。在这条规则下，将黑色雨刷的数量改为 4 个。",
+        "移除黑色橡胶轮胎。",
+        "将玻璃挡风玻璃移到银色金属车轮下方。"
+      ]
+    },
+    "cm/07e76fa2f3fae8d5": {
+      "fingerprint": "a347f93024ac6ff9f6c3a5c4a1e690481f805f8cbb63461520face62ec6208d1",
+      "en": [
+        "Set a persistent rule for all following edits: teal color must be applied exclusively to the specific object being directly added or modified — do not colorize the background, surrounding elements, or any untouched area. With this rule active, Change the count of metal grey plaque to 3",
+        "Replace metal grey pipe with rib",
+        "Change the position of rib to below of metal grey plaque"
+      ],
+      "zh": [
+        "为此后的所有编辑设定一条持续规则：只对当前直接添加或修改的具体物体使用蓝绿色，不要给背景、周围元素或任何未编辑区域着色。在这条规则下，将灰色金属牌匾的数量改为 3 个。",
+        "将灰色金属管替换为肋骨。",
+        "将肋骨移到灰色金属牌匾下方。"
+      ]
+    },
+    "cm/087a6ff68d85e348": {
+      "fingerprint": "6340a2a4a383d8a917e9d557d28bf5ddf6170c48f75c348f01ab0da505ff4918",
+      "en": [
+        "From now on, every edit must apply leather material only to the object that is being added or changed — leave the texture, surface, and material of the background and all unmodified objects untouched. With this rule active, Replace the text 'PILOT 64' on metal orange and white boat with 'SEA GUARD'",
+        "Change the color of rubber black fender to gray",
+        "Remove metal orange mast"
+      ],
+      "zh": [
+        "从现在起，每次编辑只能对正在添加或修改的物体使用皮革材质；背景及所有未修改物体的纹理、表面和材质都应保持不变。在这条规则下，将橙白色金属船上的文字 'PILOT 64' 替换为 'SEA GUARD'。",
+        "将黑色橡胶护舷的颜色改为灰色。",
+        "移除橙色金属桅杆。"
+      ]
+    },
+    "cm/0a79cb2db3501243": {
+      "fingerprint": "08ec0be6636fe5a6555193a8dcc05e246fb0c3810d5f49c1c92116f3f09f1dd1",
+      "en": [
+        "Set a persistent rule for all following edits: plaster material must be applied exclusively to the specific object being directly added or modified — do not change the texture, material, or appearance of any surrounding or unrelated objects. With this rule active, Add text 'Blue scarf' on the image",
+        "Add apple on the left of glass bowl",
+        "Change the count of apple to 2"
+      ],
+      "zh": [
+        "为此后的所有编辑设定一条持续规则：只对当前直接添加或修改的具体物体使用石膏材质，不要改变周围或无关物体的纹理、材质或外观。在这条规则下，在图像上添加文字 'Blue scarf'。",
+        "在玻璃碗左侧添加一个苹果。",
+        "将苹果的数量改为 2 个。"
+      ]
+    },
+    "cm/0b92cb83839cad4b": {
+      "fingerprint": "ac590dc37af2f80041e8ef7f72e9f7a753075abfea2f9443e1a970fb2745afe4",
+      "en": [
+        "Set a persistent rule for all following edits: stainless steel material must be applied exclusively to the specific object being directly added or modified — do not change the texture, material, or appearance of any surrounding or unrelated objects. With this rule active, Replace the text 'POW MIA' on nylon black flag with 'VETERANS'",
+        "Change the count of denim blue jeans to 3",
+        "Change the position of nylon black flag to left of plastic black helmet"
+      ],
+      "zh": [
+        "为此后的所有编辑设定一条持续规则：只对当前直接添加或修改的具体物体使用不锈钢材质，不要改变周围或无关物体的纹理、材质或外观。在这条规则下，将黑色尼龙旗上的文字 'POW MIA' 替换为 'VETERANS'。",
+        "将蓝色牛仔布牛仔裤的数量改为 3 条。",
+        "将黑色尼龙旗移到黑色塑料头盔左侧。"
+      ]
+    },
+    "cm/0d23cdca2ef3438d": {
+      "fingerprint": "5e024aff93bdf99e19994a9992ca1487623717e50262fe6b2a465562693cf009",
+      "en": [
+        "Apply a standing constraint to all subsequent edits: only the object directly involved in each edit should be given stainless steel material — the surrounding objects, background, and any area not explicitly edited must keep their original material. With this rule active, Change the background to Construction site with scaffolding, cones, and gravel ground, remain the cotton black shirt, plastic black sunglasses unchanged",
+        "Change the position of cotton black shirt to right of plastic black sunglasses",
+        "Replace cotton black shirt with board"
+      ],
+      "zh": [
+        "为后续所有编辑设定一条持续约束：只有每次编辑直接涉及的物体才应被赋予不锈钢材质；周围物体、背景和任何未明确编辑的区域都必须保持原有材质。在这条规则下，将背景改为有脚手架、锥形路障和碎石地面的建筑工地，保持黑色棉质衬衫和黑色塑料太阳镜不变。",
+        "将黑色棉质衬衫移到黑色塑料太阳镜右侧。",
+        "将黑色棉质衬衫替换为板子。"
+      ]
+    },
+    "cm/0e90b77cb77cd50f": {
+      "fingerprint": "5e1d7328ac83031ef2e871a14a5b81bb04a33be9770ed3811771c09712e96fbc",
+      "en": [
+        "From now on, every edit must apply fabric material only to the object that is being added or changed — leave the texture, surface, and material of the background and all unmodified objects untouched. With this rule active, Change the background to mountain, remain the blue headband, plastic black sunglasses, blue shirt, black vest, yellow jacket, black pants, blue pouch, grey hiking shoe unchanged",
+        "Add cone on the below of black vest",
+        "Change the position of blue shirt to below of black pants"
+      ],
+      "zh": [
+        "从现在起，每次编辑只能对正在添加或修改的物体使用织物材质；背景及所有未修改物体的纹理、表面和材质都应保持不变。在这条规则下，将背景改为山，保持蓝色头带、黑色塑料太阳镜、蓝色衬衫、黑色背心、黄色夹克、黑色裤子、蓝色小包和灰色登山鞋不变。",
+        "在黑色背心下方添加一个锥形物（cone）。",
+        "将蓝色衬衫移到黑色裤子下方。"
+      ]
+    },
+    "cu/00a554e4545e8b5d": {
+      "fingerprint": "e2e7f2148a06ebd5fc23b8eeda76a1c91ef86583bf39a256fac1c7df0da45948",
+      "en": [
+        "Replace pumpkin orange scrap with leaf",
+        "Change its color to gold",
+        "Remove it"
+      ],
+      "zh": [
+        "将橙色南瓜碎片替换为叶子。",
+        "将它的颜色改为金色。",
+        "移除它。"
+      ]
+    },
+    "cu/00db092ac5a3c7bc": {
+      "fingerprint": "27982184e8a348e82e9fd6d6c8ae7f78ff06ae294a14a93907a05fde0e1da775",
+      "en": [
+        "Replace plastic yellow helmet with crown",
+        "Change its color to brown",
+        "Remove it"
+      ],
+      "zh": [
+        "将黄色塑料头盔替换为王冠。",
+        "将它的颜色改为棕色。",
+        "移除它。"
+      ]
+    },
+    "cu/01ac985d4674aa23": {
+      "fingerprint": "25cbb72b1c79d85675056f987b6dccf058a96c9e1aee9344b0292d8047dc22b6",
+      "en": [
+        "Change the material of stone grey scorpion to bronze",
+        "Change its color to green",
+        "Remove it"
+      ],
+      "zh": [
+        "将灰色石质蝎子的材质改为青铜。",
+        "将它的颜色改为绿色。",
+        "移除它。"
+      ]
+    },
+    "cu/01c26860d830e3ba": {
+      "fingerprint": "ad3c01cb4fa56b6e01dc098df1f176c114a2723a5180ae9d8f6606d18d8e6558",
+      "en": [
+        "Change the position of plastic black jar to below of plastic yellow jar",
+        "Change its color to green",
+        "Change its count to 1"
+      ],
+      "zh": [
+        "将黑色塑料罐移到黄色塑料罐下方。",
+        "将它的颜色改为绿色。",
+        "将它的数量改为 1 个。"
+      ]
+    },
+    "cu/024257c555c6d20e": {
+      "fingerprint": "3eb7679d5fecc7375e2d84770134f9cfdba63326e2331d2781ec8da584907df0",
+      "en": [
+        "Change the position of fabric yellow robe to below of fabric red robe",
+        "Change its color to blue",
+        "Change its count to 5"
+      ],
+      "zh": [
+        "将黄色织物长袍移到红色织物长袍下方。",
+        "将它的颜色改为蓝色。",
+        "将它的数量改为 5 件。"
+      ]
+    },
+    "cu/02bf4cb809ae8981": {
+      "fingerprint": "8896af2daec4f243caacca63fdb31bca358f242a459123a9df71ff3278ca4528",
+      "en": [
+        "Change the material of paper brown border to wood",
+        "Change its color to peach",
+        "Remove it"
+      ],
+      "zh": [
+        "将棕色纸质边框的材质改为木头。",
+        "将它的颜色改为桃色。",
+        "移除它。"
+      ]
+    },
+    "cu/03406a14516e371c": {
+      "fingerprint": "ef68f28b802a33470d4d4d54d026ad278f70c107abe314bc55b65448ea854446",
+      "en": [
+        "Change the color of canvas multi-colored painting to black",
+        "Change the count of it to 3",
+        "Change the material of wood brown cabinet to marble"
+      ],
+      "zh": [
+        "将多色画布画作的颜色改为黑色。",
+        "将它的数量改为 3 幅。",
+        "将棕色木质柜子的材质改为大理石。"
+      ]
+    },
+    "cu/03b83e8a7e7e7522": {
+      "fingerprint": "1261b65b45e169deddbcde9e47e6ae94c528de930c4d4a2b1fcdd516e503b4ce",
+      "en": [
+        "Change the color of metal silver motor to black",
+        "Change its color to red",
+        "Change its color to peach"
+      ],
+      "zh": [
+        "将银色金属电机的颜色改为黑色。",
+        "将它的颜色改为红色。",
+        "将它的颜色改为桃色。"
+      ]
+    },
+    "cu/03ec8dc7da17c636": {
+      "fingerprint": "85fd24831fc4b8d85ee4805ec92cbdcba57b661cad46528be63fe1088c677823",
+      "en": [
+        "Change the color of wood brown cabinet to green",
+        "Add text '早日康复' on the image",
+        "Change its color to gray"
+      ],
+      "zh": [
+        "将棕色木质柜子的颜色改为绿色。",
+        "在图像上添加文字 '早日康复'。",
+        "将它的颜色改为灰色。"
+      ]
+    },
+    "cu/040c344af6a4e41c": {
+      "fingerprint": "4858b91673ddf8510d81311b9e58c8886450768c525407ca3790c791b733fb89",
+      "en": [
+        "Change the color of fur brown rabbit to gray",
+        "Change its count to 3",
+        "Change their material to stone"
+      ],
+      "zh": [
+        "将棕色毛皮兔子的颜色改为灰色。",
+        "将它的数量改为 3 只。",
+        "将它们的材质改为石头。"
+      ]
+    },
+    "cu/042307b2c5f91d72": {
+      "fingerprint": "2c8f75a291f9eaeea585076f91e97568809ebb08afd41173d9c6722ec3524d4d",
+      "en": [
+        "Change the color of fur brown and grey monkey to white",
+        "Change its count to 5",
+        "Change their material to marble"
+      ],
+      "zh": [
+        "将棕灰色毛皮猴子的颜色改为白色。",
+        "将它的数量改为 5 只。",
+        "将它们的材质改为大理石。"
+      ]
+    },
+    "cu/079241dc54963063": {
+      "fingerprint": "ad146a648e98a4307cc9166eb9b689cb8c5c3b83e2b0ee6ea3db924409707089",
+      "en": [
+        "Change the material of stone grey tower to brick",
+        "Change its color to orange",
+        "Remove it"
+      ],
+      "zh": [
+        "将灰色石塔的材质改为砖。",
+        "将它的颜色改为橙色。",
+        "移除它。"
+      ]
+    },
+    "cu/0846c9f3e5d943bd": {
+      "fingerprint": "45cc6bcabe31c4e31d78e6956313172a4b02d81242b17fee8a893191397129d4",
+      "en": [
+        "Change the color of plastic black remote unit to white",
+        "Change its color to red",
+        "Change its color to gray"
+      ],
+      "zh": [
+        "将黑色塑料遥控器的颜色改为白色。",
+        "将它的颜色改为红色。",
+        "将它的颜色改为灰色。"
+      ]
+    },
+    "cu/084e21a1b0b6859a": {
+      "fingerprint": "c71a0c56101b4fa95a5a289ccc440895e5d240f0cb0b134a5babf7ae9664538c",
+      "en": [
+        "Change the color of wood brown chair to black",
+        "Add text '诸事顺利' on the image",
+        "Change its color to green"
+      ],
+      "zh": [
+        "将棕色木椅的颜色改为黑色。",
+        "在图像上添加文字 '诸事顺利'。",
+        "将它的颜色改为绿色。"
+      ]
+    },
+    "cu/0e66e6da68710ee1": {
+      "fingerprint": "e490f983160e8e8a797e2cf458cc6159235d091a5cd30a89b6a16affbe066861",
+      "en": [
+        "Add human on the right of wool grey hat",
+        "Change the material of it to feather",
+        "Change its color to black"
+      ],
+      "zh": [
+        "在灰色羊毛帽子右侧添加一个人。",
+        "将它的材质改为羽毛。",
+        "将它的颜色改为黑色。"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "models": [
+    {"name": "DINOv3-ViT-L-16", "repo": "timm/vit_large_patch16_dinov3.lvd1689m", "revision": "30c1109559f65dea34316b0d4842d35c5771fe11"},
+    {"name": "bert-base-uncased", "repo": "google-bert/bert-base-uncased", "revision": "86b5e0934494bd15c9632b12f734a8a67f723594"},
+    {"name": "Qwen3.6-27B", "repo": "Qwen/Qwen3.6-27B", "revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9"},
+    {"name": "gemma-4-31B-it", "repo": "google/gemma-4-31B-it", "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475"}
+  ],
+  "groundingdino": {
+    "source_revision": "856dde20aee659246248e20734ef9ba5214f5e44",
+    "weights_url": "https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth"
+  }
+}

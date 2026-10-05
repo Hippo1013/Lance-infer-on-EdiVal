@@ -1,0 +1,20 @@
+{
+  "benchmark": "edival",
+  "checked_on": "2026-10-05",
+  "sessions": 572,
+  "turns": 1716,
+  "csv_rows": 1716,
+  "archive_images": 606,
+  "unreferenced_images": 34,
+  "sha256": {
+    "oai_instruction_generation_output.csv": "1c17f9f579c5337d3846f45714153f87f27cc0f85119d897dcb62e5301351555",
+    "input_images_resize_512.zip": "c15d9010ab50dd6ddaed81c3ef0f573591149ee31ca266124e39f4e8518d0c79"
+  },
+  "sources": {
+    "code": "https://github.com/TianyuCodings/EdiVal",
+    "code_revision": "96d34b00d7ea2dc3de90f2bb01f292f6dec6294a",
+    "images": "https://huggingface.co/datasets/C-Tianyu/EdiVal",
+    "images_revision": "583d3efe2daf81afb0a13ee2c4df06cdaad1b554"
+  },
+  "verification": "Server CSV matches the pinned official GitHub CSV SHA-256. ZIP CRC and all 572 referenced RGB images were checked; image ZIP SHA-256 is a locally computed identity, not a claimed upstream checksum."
+}

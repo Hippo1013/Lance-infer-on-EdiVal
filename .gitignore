@@ -21,3 +21,8 @@ wandb/
 *.ckpt
 *.pt
 *.pth
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+runtime/

@@ -1,0 +1,12 @@
+{
+  "steps": 30,
+  "timestep_shift": 3.5,
+  "cfg_text_scale": 4.0,
+  "cfg_img_scale": 1.0,
+  "cfg_interval": [0.4, 1.0],
+  "cfg_renorm_type": "global",
+  "cfg_renorm_min": 0.0,
+  "resolution": 768,
+  "seed": 42,
+  "cache_mode": "none"
+}

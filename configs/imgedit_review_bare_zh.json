@@ -1,0 +1,391 @@
+{
+  "note": "无标签完整历史重跑结果的浏览翻译；仅供展示，保留原始指代与指定文字。",
+  "sessions": {
+    "content_memory/000038819": {
+      "fingerprint": "14566b0bb7069f937b49ce41de9c0a5a4711d72ed6f1b0c459c26268eba18509",
+      "en": [
+        "Ensure all subsequent edits are yellow. Change the license plate color",
+        "Change the car body color"
+      ],
+      "zh": [
+        "确保后续所有编辑都使用黄色。改变车牌的颜色。",
+        "改变车身的颜色。"
+      ]
+    },
+    "content_memory/000066341": {
+      "fingerprint": "5827ff035238c073f53fe8ef8a6ffa1bf90eca39768bdb3231e339b7edf74f92",
+      "en": [
+        "Ensure all subsequent edits are green, add some embellishments in the empty area of the plate",
+        "Replace the tomato with some fruit",
+        "Change the plate's color"
+      ],
+      "zh": [
+        "确保后续所有编辑都使用绿色。在盘子的空白区域添加一些装饰。",
+        "把番茄替换成一些水果。",
+        "改变盘子的颜色。"
+      ]
+    },
+    "content_memory/000093912": {
+      "fingerprint": "b14713f20390467735fc6893381ecd4aabcadb007dd0b1861729a2a764e9ccec",
+      "en": [
+        "Ensure all subsequent edits use leather material, modify the pillow's material",
+        "Add a piece of clothing on the bed",
+        "Add another bag"
+      ],
+      "zh": [
+        "确保后续所有编辑都使用皮革材质。修改枕头的材质。",
+        "在床上添加一件衣服。",
+        "再添加一个包。"
+      ]
+    },
+    "content_memory/000128286": {
+      "fingerprint": "85f017982dc923453dc83925fae75807aad52e7261a991dc80e098a847ea3a1c",
+      "en": [
+        "Include coffee-related elements in all subsequent edits, add a cup",
+        "Randomly place some items next to the cup",
+        "Fill the cup with liquid"
+      ],
+      "zh": [
+        "在后续所有编辑中加入与咖啡有关的元素。添加一个杯子。",
+        "在杯子旁边随意摆放一些物品。",
+        "把杯子装满液体。"
+      ]
+    },
+    "content_memory/000231068": {
+      "fingerprint": "ebd0b845f6e6e6f96f1fa2f98d8947b69f5cdffe1410afb07d4a64ede0ce49d8",
+      "en": [
+        "Ensure all subsequent edits use iron material. Change the door's material",
+        "Add a table in the open area",
+        "Modify the appearance of the entire house"
+      ],
+      "zh": [
+        "确保后续所有编辑都使用铁质材料。改变门的材质。",
+        "在空地上添加一张桌子。",
+        "修改整栋房子的外观。"
+      ]
+    },
+    "content_memory/000231250": {
+      "fingerprint": "c36f4afc995df63408885f3a26857140bc778b557c8f372a7f53b74a806072de",
+      "en": [
+        "Ensure all subsequent edits are milky white. Place a sculpture in the open area",
+        "Change the color of the flower bed",
+        "Change the color of the flag on the city wall"
+      ],
+      "zh": [
+        "确保后续所有编辑都使用乳白色。在空地上放置一座雕塑。",
+        "改变花坛的颜色。",
+        "改变城墙上旗帜的颜色。"
+      ]
+    },
+    "content_memory/000268923": {
+      "fingerprint": "600a0484215c5781f12eeca501f4b83a80f852541cfe307ffcde0aeac6c08c9f",
+      "en": [
+        "Ensure all subsequent edits are black. Change the pants color",
+        "Remove the hat",
+        "Change the color of the clothes"
+      ],
+      "zh": [
+        "确保后续所有编辑都使用黑色。改变裤子的颜色。",
+        "移除帽子。",
+        "改变衣服的颜色。"
+      ]
+    },
+    "content_memory/000270466": {
+      "fingerprint": "3b8cdfda5eb28ae59d2118f600749acd36ee6b8abfe8682c3e5da0e72367705d",
+      "en": [
+        "Ensure all subsequent edits are in the background and relatively blurred. Place some clutter on the car",
+        "Change the car's color to black"
+      ],
+      "zh": [
+        "确保后续所有编辑都位于背景中，并且比较模糊。在汽车上放置一些杂物。",
+        "把汽车的颜色改为黑色。"
+      ]
+    },
+    "content_memory/000278574": {
+      "fingerprint": "07ff6fe555e917c927585644615bc3cbf9ab033f06be0e7966a6788768bd0c02",
+      "en": [
+        "Ensure the material of all subsequent edits is wood and the color matches the table. Put a box on the chair",
+        "Place another box next to the first box",
+        "Place one more box"
+      ],
+      "zh": [
+        "确保后续所有编辑都使用木质材料，且颜色与桌子相同。在椅子上放一个箱子。",
+        "在第一个箱子旁边再放一个箱子。",
+        "再放一个箱子。"
+      ]
+    },
+    "content_memory/000339492": {
+      "fingerprint": "9ac645dcfb078a54ca52d219cabc76de0cfd5ea82150379c756986c036280365",
+      "en": [
+        "Ensure the later edits share a uniform color, replace the font color on the billboard",
+        "Replace the color of the car in front",
+        "Add a toolbox on the ground"
+      ],
+      "zh": [
+        "确保后续编辑使用统一的颜色。改变广告牌上文字的颜色。",
+        "改变前方汽车的颜色。",
+        "在地上添加一个工具箱。"
+      ]
+    },
+    "content_understand/000038819": {
+      "fingerprint": "784f3bae91f6e61281e27b2bc480ede6fbfdcaee640f0a815a6223aead82de42",
+      "en": [
+        "Change the license plate to black",
+        "Turn it white and write 111 on it",
+        "Remove it"
+      ],
+      "zh": [
+        "把车牌改为黑色。",
+        "把它变成白色，并在上面写上 111。",
+        "移除它。"
+      ]
+    },
+    "content_understand/000066341": {
+      "fingerprint": "b391a6363e1990facfe76e23dd8a6a2b2b1e9669eb13101ce27061f0863593ed",
+      "en": [
+        "Add a ring of decorative garnishes to the plate",
+        "Turn it black",
+        "Remove it"
+      ],
+      "zh": [
+        "在盘子上添加一圈装饰配菜。",
+        "把它变成黑色。",
+        "移除它。"
+      ]
+    },
+    "content_understand/000093912": {
+      "fingerprint": "4da2d84c874810e29a13e947957c69e9bd1a9b7f7ed05b44d7a0d82653ac2700",
+      "en": [
+        "Turn the pillow white",
+        "Turn it black",
+        "Remove it"
+      ],
+      "zh": [
+        "把枕头变成白色。",
+        "把它变成黑色。",
+        "移除它。"
+      ]
+    },
+    "content_understand/000128286": {
+      "fingerprint": "f04f1e51445077d5f3410bbbe15f2459d59d4723c1cc88195c34731aba486f66",
+      "en": [
+        "Replace the liquid in the teacup with milk",
+        "Change it to clear water",
+        "Make it empty"
+      ],
+      "zh": [
+        "把茶杯里的液体换成牛奶。",
+        "把它换成清水。",
+        "把它清空。"
+      ]
+    },
+    "content_understand/000231068": {
+      "fingerprint": "efc241782c3453822c0d65207a7100a79b521c555f371d5ff4591e9444f4017a",
+      "en": [
+        "Change the material of the door to iron",
+        "Turn it black",
+        "Delete it"
+      ],
+      "zh": [
+        "把门的材质改为铁。",
+        "把它变成黑色。",
+        "删除它。"
+      ]
+    },
+    "content_understand/000231250": {
+      "fingerprint": "c9ab529942a339035a0646a371c5b715f5bbf067cbac0ea0c1f67293358fc68a",
+      "en": [
+        "Remove the flower bed on the left",
+        "Add a trash can there",
+        "Remove it"
+      ],
+      "zh": [
+        "移除左侧的花坛。",
+        "在那里添加一个垃圾桶。",
+        "移除它。"
+      ]
+    },
+    "content_understand/000268923": {
+      "fingerprint": "dccf3fb528e3020d5c1abb69e72bc6600b5f421cd4255dff7ba9fe633925759d",
+      "en": [
+        "Change the person's hat to green",
+        "Erase the lettering on it",
+        "Turn it black"
+      ],
+      "zh": [
+        "把这个人的帽子改为绿色。",
+        "擦除它上面的文字。",
+        "把它变成黑色。"
+      ]
+    },
+    "content_understand/000270466": {
+      "fingerprint": "8faa9e378842cf411fe381b921da53c72656c1bfac54642c4871966837255475",
+      "en": [
+        "Turn the car in the back black",
+        "Make it clear",
+        "Turn it white"
+      ],
+      "zh": [
+        "把后面的汽车变成黑色。",
+        "让它变得清晰。",
+        "把它变成白色。"
+      ]
+    },
+    "content_understand/000278574": {
+      "fingerprint": "a7a5528b23185482220cf459029792c9e33e75d928e5598ba0f6d992f5b04868",
+      "en": [
+        "Light the candle",
+        "Remove the object to its left",
+        "Remove it as well"
+      ],
+      "zh": [
+        "点燃蜡烛。",
+        "移除它左边的物体。",
+        "也移除它。"
+      ]
+    },
+    "content_understand/000339492": {
+      "fingerprint": "c07a5cbadc1114ced50fce0ad95855857e737247f6fd3e30c2a336a6baff50e1",
+      "en": [
+        "Change the sign to black lettering",
+        "Add the word 'hello'",
+        "Delete it"
+      ],
+      "zh": [
+        "把标牌上的文字改为黑色。",
+        "添加单词“hello”。",
+        "删除它。"
+      ]
+    },
+    "version_backtrace/000038819": {
+      "fingerprint": "965ced8b8c5eb741bfc2c22c6f9d906d28cd484a7d3c6d10f6c7d6a12ca71c92",
+      "en": [
+        "Change the characters on the license plate to 1",
+        "Change the car body to white",
+        "Change the car body in the original input to white"
+      ],
+      "zh": [
+        "把车牌上的字符改为 1。",
+        "把车身改为白色。",
+        "把原始输入图像中的车身改为白色。"
+      ]
+    },
+    "version_backtrace/000066341": {
+      "fingerprint": "138ad6199174ba6625aaaf156047bdea8a28844b60442c46af3214e06d7696c0",
+      "en": [
+        "Delete the tomato",
+        "Your edit is not good, redo it",
+        "Add some decoration based on the original image"
+      ],
+      "zh": [
+        "删除番茄。",
+        "你的编辑不太好，重新做一次。",
+        "在原图的基础上添加一些装饰。"
+      ]
+    },
+    "version_backtrace/000093912": {
+      "fingerprint": "516af420085d9d13dd7d6d021548d896ade308dcf7c19255077c131951681248",
+      "en": [
+        "Turn the quilt white",
+        "Add a piece of clothing on the bed",
+        "Cancel the impact of the previous round of edits and change the quilt back to its original color"
+      ],
+      "zh": [
+        "把被子变成白色。",
+        "在床上添加一件衣服。",
+        "撤销上一轮编辑的影响，并把被子改回原来的颜色。"
+      ]
+    },
+    "version_backtrace/000128286": {
+      "fingerprint": "cb4cfa06ab7e9c1fb6d386a66358f4bc0a2f6cea852135199502e4ce65909a08",
+      "en": [
+        "Add a cup",
+        "Randomly place some items next to the cup",
+        "Undo the previous round of edits and turn the cup black"
+      ],
+      "zh": [
+        "添加一个杯子。",
+        "在杯子旁边随意摆放一些物品。",
+        "撤销上一轮编辑，并把杯子变成黑色。"
+      ]
+    },
+    "version_backtrace/000231068": {
+      "fingerprint": "20d306cff564a2de3fcb2202ceb7d81c3f6fedc414f26e531104280c897e7ab4",
+      "en": [
+        "Change the house door to black",
+        "Add a table in the open space",
+        "Restore the original image for me"
+      ],
+      "zh": [
+        "把房子的门改为黑色。",
+        "在空地上添加一张桌子。",
+        "帮我恢复原图。"
+      ]
+    },
+    "version_backtrace/000231250": {
+      "fingerprint": "b899f8b62b8638b308e0f2a163d988d319b5c0618da2e2fc3c8147f16f74ca2a",
+      "en": [
+        "Add a person in the open space",
+        "Add another person",
+        "I only want to keep the newly added people"
+      ],
+      "zh": [
+        "在空地上添加一个人。",
+        "再添加一个人。",
+        "我只想保留新添加的人。"
+      ]
+    },
+    "version_backtrace/000268923": {
+      "fingerprint": "666b15c3d11b85eb739aec5bba060c428f8595ce3ba1f857a321428917180aa7",
+      "en": [
+        "Change the text on the clothes to 'Hello'",
+        "Turn the hat black",
+        "Starting from the original image, change the clothing color to green"
+      ],
+      "zh": [
+        "把衣服上的文字改为“Hello”。",
+        "把帽子变成黑色。",
+        "从原图开始，把衣服的颜色改为绿色。"
+      ]
+    },
+    "version_backtrace/000270466": {
+      "fingerprint": "83625aa07a11b8b47e871342d5a8e080779a2aaff8c8c23ea54e390fe391969b",
+      "en": [
+        "Change the person's clothes to yellow",
+        "Remove the car in the background",
+        "Output the result of the previous round of edits"
+      ],
+      "zh": [
+        "把这个人的衣服改为黄色。",
+        "移除背景中的汽车。",
+        "输出上一轮编辑的结果。"
+      ]
+    },
+    "version_backtrace/000278574": {
+      "fingerprint": "3abb02be492c04473359102395ae85a8a3e4aa8a8cbe5b2774d3142f1d55e202",
+      "en": [
+        "Replace the chair with a backless stool",
+        "Undo the previous round of edits and turn the original chair black",
+        "I still want to keep the edit with the backless stool, output it"
+      ],
+      "zh": [
+        "把椅子替换成无靠背的凳子。",
+        "撤销上一轮编辑，并把原来的椅子变成黑色。",
+        "我还是想保留无靠背凳子的那次编辑，输出它。"
+      ]
+    },
+    "version_backtrace/000339492": {
+      "fingerprint": "cdf70e897357ecc643b97a393cf5cb5bd7a84f3c0755ba0577458b2f93da18ac",
+      "en": [
+        "Change the car in front to white",
+        "Change the color of the billboard to yellow",
+        "Restore the car's color"
+      ],
+      "zh": [
+        "把前方的汽车改为白色。",
+        "把广告牌的颜色改为黄色。",
+        "恢复汽车原来的颜色。"
+      ]
+    }
+  }
+}

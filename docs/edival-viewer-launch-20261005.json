@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "http_images_verified": 23,
+  "manifest": {
+    "state": "running",
+    "total_sessions": 572,
+    "completed_sessions": 5,
+    "completed_turns": 17,
+    "attention_files": 17,
+    "run_fingerprint": "11938d059c3ca5e54b69cf824f91e9a7ec51adfc488f38710d03e0870f7b79b0"
+  },
+  "scope": "Startup checks only; full inference and 2288-image final review audit still pending",
+  "viewer_tests_per_host": 3,
+  "translated_sessions": 30,
+  "translated_instructions": 90,
+  "browser_checks": [
+    "complete-session filter",
+    "search",
+    "Chinese and exact English instructions",
+    "pending images disabled",
+    "previous/original versus generated image comparison",
+    "four-column saved-image layout"
+  ],
+  "source_hashes": {
+    "scripts/edival_review.py": "074287389ad967f037f86a4387d104694fcff410654b16d0062889e1d53bb583",
+    "scripts/edival_review_finish.py": "a290c0f1d9a706d3c74743fa25489f7f0775cef897b4f41a921de8db95eeba24",
+    "web/edival-review.html": "9a8c0220c15cc19e0baadfc0a0f062984c322e5b98e3ba364076a54dd2afb0b7",
+    "configs/edival_review_30_zh.json": "9cacb3bc932e7cb45e0bdbc4c52f4276d34ab9bfb350c1f269f69d2c285752ce"
+  }
+}

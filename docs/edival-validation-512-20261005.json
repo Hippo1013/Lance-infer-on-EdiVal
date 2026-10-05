@@ -1,0 +1,180 @@
+{
+  "status": "passed",
+  "benchmark": "edival",
+  "protocol": "lance-history-bare-v2",
+  "resolution": 512,
+  "profile": "single",
+  "gpu": "1",
+  "sessions": 2,
+  "turns_per_run": 6,
+  "generated_turns": 12,
+  "attention_files": 6,
+  "comparison": {
+    "reference": "temporary none-cache engineering run (cleaned after validation)",
+    "candidate": "temporary prefix+attention engineering run (cleaned after validation)",
+    "turns": 6,
+    "identical_pixels": true,
+    "status": "passed",
+    "note": "Pixel identity is required before enabling cache by default.",
+    "differences": [
+      {
+        "case": "edival/0/turn_1",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      },
+      {
+        "case": "edival/0/turn_2",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      },
+      {
+        "case": "edival/0/turn_3",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      },
+      {
+        "case": "edival/1/turn_1",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      },
+      {
+        "case": "edival/1/turn_2",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      },
+      {
+        "case": "edival/1/turn_3",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      }
+    ]
+  },
+  "max_attention_reference_error": 0.00022041797637939453,
+  "max_attention_probability_sum_error": 7.402896881103516e-05,
+  "peak_torch_allocated_bytes": 16945470464,
+  "runs": {
+    "none": {
+      "turns": 6,
+      "worker": {
+        "worker": 0,
+        "model_load_seconds": 43.63453012984246,
+        "session_seconds": 27.7030707760714,
+        "turns": 6,
+        "generated_turns": [
+          [
+            "edival/0",
+            1
+          ],
+          [
+            "edival/0",
+            2
+          ],
+          [
+            "edival/0",
+            3
+          ],
+          [
+            "edival/1",
+            1
+          ],
+          [
+            "edival/1",
+            2
+          ],
+          [
+            "edival/1",
+            3
+          ]
+        ],
+        "gpu": "1",
+        "sessions": [
+          "edival/0",
+          "edival/1"
+        ],
+        "pid": 147846,
+        "completed": true
+      }
+    },
+    "prefix_attention": {
+      "turns": 6,
+      "worker": {
+        "worker": 0,
+        "model_load_seconds": 41.61216576397419,
+        "session_seconds": 28.58169812289998,
+        "turns": 6,
+        "generated_turns": [
+          [
+            "edival/0",
+            1
+          ],
+          [
+            "edival/0",
+            2
+          ],
+          [
+            "edival/0",
+            3
+          ],
+          [
+            "edival/1",
+            1
+          ],
+          [
+            "edival/1",
+            2
+          ],
+          [
+            "edival/1",
+            3
+          ]
+        ],
+        "gpu": "1",
+        "sessions": [
+          "edival/0",
+          "edival/1"
+        ],
+        "pid": 148035,
+        "completed": true
+      }
+    }
+  },
+  "source_hashes": {
+    "configs/edival_dataset.json": "84198cc582da80c02c184a72fdb0687d543b50816c069178230f2aeac1882d8f",
+    "pyproject.toml": "35fc468406fa0e25fa81e57dc18bf817eee41fa0930db983397018895a8f8a58",
+    "scripts/edival_acceptance.py": "77d6647e2c762f7217d06eeee0a5ba3ea56ee67cab4f2d064b4446acdb8cf250",
+    "scripts/edival_data_check.py": "8c603fa940f6a9ea6bdc61bb8f13aedb49f46051599feaee9e299f51bf95004a",
+    "scripts/full_edival_job.py": "07bbb01d00e396a8214627068ed16b20da0111c8881339d99296094f0597e5c4",
+    "scripts/run_edival_job.sh": "49b4618a8e381ca6bd2a1922d41f0871ccc20efcf35c8d3a2c685c0acb65912a",
+    "scripts/validate_edival_full.py": "d746eb1c111e75f1b9ece0edbee4357e3b32cc2e47a5f0ff5c598042e84c3dfb",
+    "src/lance_mice/__init__.py": "a6b2ce11819bd1bb3c27be2246084597ae5dc22c94ebe11128cd2dd4f916c7e6",
+    "src/lance_mice/acceptance.py": "c6dfcc8fa0bff9fcb1dcdf98099a048a9a99ae1415b3586704dc2bcd97914570",
+    "src/lance_mice/attention.py": "58f8589e49b305ca7ef84538ff9921f58df30d198cb89231de92007b263a136f",
+    "src/lance_mice/backend.py": "d056090d1163e78faf9145b6b023e4b40862e79acd967a53c83f7def56cc09a0",
+    "src/lance_mice/dataset.py": "d9393858ec69b74de748c06fcff9f4fb738b9d7a3c23b9263e6a96cf70a3482d",
+    "src/lance_mice/edival.py": "4bf18b7e3fd15390347c05ffc5725b9ef5e0c83b04439810a82bd73ca1c85462",
+    "src/lance_mice/edival_dataset.py": "babfef3cd8e27c8f659976a2eec3350dd55e5ed0a5182040407204b0e6bc2a2d",
+    "src/lance_mice/images.py": "b30f407dcd2afba9c7a6e0c10d27955d92f30ecddb3b727e49ad2004a74328e0",
+    "src/lance_mice/imgedit.py": "5f3feae099a43ef07e2a34ebd025b23f819a95e3484f4de9b3c535d00a7783ad",
+    "src/lance_mice/omni_pipeline.py": "77208947be9cece8f22e20169422fe28edb8eaa8a8721c25a514d40040933069",
+    "src/lance_mice/performance.py": "72539860972886ff59690db663ea3318e0769ab8feec71a76d827bcd40369e18",
+    "src/lance_mice/protocol.py": "749b76b4af036b2d88c942e8612bd2e2c91faf248f14bdb985acf4a885766cca",
+    "src/lance_mice/runner.py": "e2f17e7e8e5e4f7264026bf45d860a2b35725b165054d341ed6216fec8331366",
+    "src/lance_mice/scoring_qwen_once.py": "806dbee686d49de9fc995232d38e55ad3ff0901fb5ac73651c0ba466f9ad356e",
+    "src/lance_mice/settings.py": "1d3104ed948c9fc78c65b6e30131701c087bfee49c22a412408a95212e1a3746",
+    "src/lance_mice/single_turn_probe.py": "53833468e5ab1a0c60980738dff7b1fd5974e829ccb3788362d62acd1ffffc63",
+    "src/lance_mice/text_artifact_probe.py": "72a183dcadc095a854d06c29d9400568706ce0bc62dd435667ee6ea25721450e"
+  },
+  "dataset_source": {
+    "oai_instruction_generation_output.csv": {
+      "sha256": "1c17f9f579c5337d3846f45714153f87f27cc0f85119d897dcb62e5301351555",
+      "size": 872227
+    },
+    "input_images_resize_512.zip": {
+      "sha256": "c15d9010ab50dd6ddaed81c3ef0f573591149ee31ca266124e39f4e8518d0c79",
+      "size": 51709607
+    }
+  },
+  "scope": "Single-GPU engineering acceptance only; no DP2 runtime, full inference or capability scoring.",
+  "validated_at": "2026-10-05",
+  "official_resolution_source": "https://github.com/TianyuCodings/EdiVal/blob/96d34b00d7ea2dc3de90f2bb01f292f6dec6294a/generate.py"
+}

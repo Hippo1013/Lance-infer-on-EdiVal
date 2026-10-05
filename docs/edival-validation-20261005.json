@@ -1,0 +1,668 @@
+{
+  "status": "passed",
+  "benchmark": "edival",
+  "protocol": "lance-history-bare-v2",
+  "profile": "single",
+  "gpu": "1",
+  "sessions": 2,
+  "turns_per_run": 6,
+  "generated_turns": 12,
+  "attention_files": 6,
+  "max_attention_reference_error": 0.00020056962966918945,
+  "max_attention_probability_sum_error": 7.712841033935547e-05,
+  "peak_torch_allocated_bytes": 18721675264,
+  "source_hashes": {
+    "pyproject.toml": "35fc468406fa0e25fa81e57dc18bf817eee41fa0930db983397018895a8f8a58",
+    "scripts/edival_acceptance.py": "50d2c797deadad3c84b44c7fc4f39fdee89f3a50728bcc984ef58463ba4462d7",
+    "src/lance_mice/__init__.py": "a6b2ce11819bd1bb3c27be2246084597ae5dc22c94ebe11128cd2dd4f916c7e6",
+    "src/lance_mice/acceptance.py": "c6dfcc8fa0bff9fcb1dcdf98099a048a9a99ae1415b3586704dc2bcd97914570",
+    "src/lance_mice/attention.py": "58f8589e49b305ca7ef84538ff9921f58df30d198cb89231de92007b263a136f",
+    "src/lance_mice/backend.py": "d056090d1163e78faf9145b6b023e4b40862e79acd967a53c83f7def56cc09a0",
+    "src/lance_mice/dataset.py": "d9393858ec69b74de748c06fcff9f4fb738b9d7a3c23b9263e6a96cf70a3482d",
+    "src/lance_mice/edival.py": "6171d0b0726362fd7452bfbde8cee5f08e23d3290ea47cdcf14ed36979b7ab26",
+    "src/lance_mice/edival_dataset.py": "babfef3cd8e27c8f659976a2eec3350dd55e5ed0a5182040407204b0e6bc2a2d",
+    "src/lance_mice/images.py": "b30f407dcd2afba9c7a6e0c10d27955d92f30ecddb3b727e49ad2004a74328e0",
+    "src/lance_mice/imgedit.py": "5f3feae099a43ef07e2a34ebd025b23f819a95e3484f4de9b3c535d00a7783ad",
+    "src/lance_mice/omni_pipeline.py": "77208947be9cece8f22e20169422fe28edb8eaa8a8721c25a514d40040933069",
+    "src/lance_mice/performance.py": "72539860972886ff59690db663ea3318e0769ab8feec71a76d827bcd40369e18",
+    "src/lance_mice/protocol.py": "749b76b4af036b2d88c942e8612bd2e2c91faf248f14bdb985acf4a885766cca",
+    "src/lance_mice/runner.py": "4006f44ebb744c8e52ea34c9ac17ff4da10bff5d10ffb3e9022ea6d598a9ac94",
+    "src/lance_mice/scoring_qwen_once.py": "806dbee686d49de9fc995232d38e55ad3ff0901fb5ac73651c0ba466f9ad356e",
+    "src/lance_mice/settings.py": "e6c612a5dfd5b2b530b70b8893bcf0177a5d0caf39f1f75217ac148de6ff80c8",
+    "src/lance_mice/single_turn_probe.py": "53833468e5ab1a0c60980738dff7b1fd5974e829ccb3788362d62acd1ffffc63",
+    "src/lance_mice/text_artifact_probe.py": "72a183dcadc095a854d06c29d9400568706ce0bc62dd435667ee6ea25721450e"
+  },
+  "dataset_source": {
+    "oai_instruction_generation_output.csv": {
+      "sha256": "1c17f9f579c5337d3846f45714153f87f27cc0f85119d897dcb62e5301351555",
+      "size": 872227
+    },
+    "input_images_resize_512.zip": {
+      "sha256": "c15d9010ab50dd6ddaed81c3ef0f573591149ee31ca266124e39f4e8518d0c79",
+      "size": 51709607
+    }
+  },
+  "scope": "Single-GPU engineering acceptance only; no DP2 runtime, full inference or capability scoring.",
+  "tested_at": "2026-10-05T20:49:20.733695+08:00",
+  "comparison": {
+    "identical_pixels": true,
+    "differences": [
+      {
+        "case": "edival/0/turn_1",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      },
+      {
+        "case": "edival/0/turn_2",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      },
+      {
+        "case": "edival/0/turn_3",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      },
+      {
+        "case": "edival/1/turn_1",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      },
+      {
+        "case": "edival/1/turn_2",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      },
+      {
+        "case": "edival/1/turn_3",
+        "identical_pixels": true,
+        "mean_absolute_pixel_error_0_255": 0.0
+      }
+    ]
+  },
+  "cpu_checks": {
+    "local": 26,
+    "server": 26
+  },
+  "data_audit": {
+    "sessions": 572,
+    "turns": 1716,
+    "csv_rows": 1716,
+    "archive_images": 606,
+    "unreferenced_images": 34,
+    "all_referenced_images_decoded": true,
+    "zip_crc_passed": true,
+    "source_sizes": {
+      "512x512": 572
+    },
+    "dp2_dry_run_sessions": [
+      286,
+      286
+    ]
+  },
+  "timings_seconds": {
+    "none": {
+      "model_load_seconds": 43.984670393168926,
+      "session_seconds": 48.71295502316207
+    },
+    "prefix_attention": {
+      "model_load_seconds": 41.4621672462672,
+      "session_seconds": 53.02512296196073
+    }
+  },
+  "active_server_project": {
+    "source_files_checked": 53,
+    "changed_files": [],
+    "edival_deployed": false
+  },
+  "burn_restore": {
+    "gpu": 1,
+    "memory_before_restore_mib": 0,
+    "pane": "1:0.0",
+    "status": "burn_start_sent",
+    "verified_running": true,
+    "verified_at": "2026-10-05T20:52:17.650197+08:00"
+  },
+  "temporary_artifacts": "Raw GPU runs and source snapshots are temporary; this report is the retained validation deliverable.",
+  "validated_turns": [
+    {
+      "session": "edival/0",
+      "turn": 1,
+      "instruction": "Add bench on the left of painted white leaf pattern",
+      "protocol": {
+        "version": "lance-history-bare-v2",
+        "segments": [
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 0,
+            "text": "",
+            "image_index": 0
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 1,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "current",
+            "turn": 1,
+            "text": "Add bench on the left of painted white leaf pattern",
+            "image_index": null
+          }
+        ],
+        "image_count": 1,
+        "instruction_count": 1,
+        "target_count": 1,
+        "cfg_removed_segments": [
+          2
+        ],
+        "user_prompt_preview": "[IMAGE_0]Add bench on the left of painted white leaf pattern"
+      },
+      "input_hashes": [
+        "48a9fe53424ff3529f74b895b5a1592b71c410ff3c8e423358d0ac5c846e1071"
+      ],
+      "output_hash": "6040a04eed0364f750828b067a92ca65d9fedfa169927f6a33137e7f65fdc1a6",
+      "output_size": [
+        768,
+        768
+      ],
+      "prefix_segments_reused": 0,
+      "attention": {
+        "sha256": "d3e60b10a5ec5b947df23e5cc7ff356b012e2fbf1b6e32f70dac5519abc96519",
+        "max_reference_absolute_error": 0.00016635656356811523,
+        "max_probability_sum_error": 7.534027099609375e-05
+      },
+      "turn_metadata_sha256": "bea42be5757874a9f5b7c174a79c4057bd0d73a8f1b8aa185a4c3aa51498eb27"
+    },
+    {
+      "session": "edival/0",
+      "turn": 2,
+      "instruction": "\"Change the count of painted white leaf pattern to 4\"",
+      "protocol": {
+        "version": "lance-history-bare-v2",
+        "segments": [
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 0,
+            "text": "",
+            "image_index": 0
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 1,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "history",
+            "turn": 1,
+            "text": "Add bench on the left of painted white leaf pattern",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 1,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 1,
+            "text": "",
+            "image_index": 1
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 1,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 2,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "current",
+            "turn": 2,
+            "text": "\"Change the count of painted white leaf pattern to 4\"",
+            "image_index": null
+          }
+        ],
+        "image_count": 2,
+        "instruction_count": 2,
+        "target_count": 1,
+        "cfg_removed_segments": [
+          7
+        ],
+        "user_prompt_preview": "[IMAGE_0]Add bench on the left of painted white leaf pattern\n\n[IMAGE_1]\n\n\"Change the count of painted white leaf pattern to 4\""
+      },
+      "input_hashes": [
+        "48a9fe53424ff3529f74b895b5a1592b71c410ff3c8e423358d0ac5c846e1071",
+        "6040a04eed0364f750828b067a92ca65d9fedfa169927f6a33137e7f65fdc1a6"
+      ],
+      "output_hash": "ea4df626e1fc6f221200b0119f1268fd6a9bd77bea73bd3ecf2e8e799391b982",
+      "output_size": [
+        768,
+        768
+      ],
+      "prefix_segments_reused": 1,
+      "attention": {
+        "sha256": "53109792b6676a52f533fad99d1e5d7fdbf622efe9dc03173c79bff764e111d7",
+        "max_reference_absolute_error": 0.00014734268188476562,
+        "max_probability_sum_error": 7.712841033935547e-05
+      },
+      "turn_metadata_sha256": "5ae4a51a897c1b347b198d93e3d69a129e823cda8f6f2e48cda95f502d88015f"
+    },
+    {
+      "session": "edival/0",
+      "turn": 3,
+      "instruction": "Change the background to park, remain the painted white leaf pattern, bench unchanged",
+      "protocol": {
+        "version": "lance-history-bare-v2",
+        "segments": [
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 0,
+            "text": "",
+            "image_index": 0
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 1,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "history",
+            "turn": 1,
+            "text": "Add bench on the left of painted white leaf pattern",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 1,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 1,
+            "text": "",
+            "image_index": 1
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 1,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 2,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "history",
+            "turn": 2,
+            "text": "\"Change the count of painted white leaf pattern to 4\"",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 2,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 2,
+            "text": "",
+            "image_index": 2
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 2,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 3,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "current",
+            "turn": 3,
+            "text": "Change the background to park, remain the painted white leaf pattern, bench unchanged",
+            "image_index": null
+          }
+        ],
+        "image_count": 3,
+        "instruction_count": 3,
+        "target_count": 1,
+        "cfg_removed_segments": [
+          12
+        ],
+        "user_prompt_preview": "[IMAGE_0]Add bench on the left of painted white leaf pattern\n\n[IMAGE_1]\n\n\"Change the count of painted white leaf pattern to 4\"\n\n[IMAGE_2]\n\nChange the background to park, remain the painted white leaf pattern, bench unchanged"
+      },
+      "input_hashes": [
+        "48a9fe53424ff3529f74b895b5a1592b71c410ff3c8e423358d0ac5c846e1071",
+        "6040a04eed0364f750828b067a92ca65d9fedfa169927f6a33137e7f65fdc1a6",
+        "ea4df626e1fc6f221200b0119f1268fd6a9bd77bea73bd3ecf2e8e799391b982"
+      ],
+      "output_hash": "d15168202d01db04459fe1c8b9af613df6c302b6ef957f1ae1982a56d9b56fb2",
+      "output_size": [
+        768,
+        768
+      ],
+      "prefix_segments_reused": 6,
+      "attention": {
+        "sha256": "8ddf2c35c340c2af27f241088259e68bee15cc24e3e02de90a8bb2d2ffc23923",
+        "max_reference_absolute_error": 0.00015270709991455078,
+        "max_probability_sum_error": 7.331371307373047e-05
+      },
+      "turn_metadata_sha256": "b80160e3510e71fc0bfa9c84cbf8afbcd3a102fb5fe43e4cca7c7bc3bfd330ad"
+    },
+    {
+      "session": "edival/1",
+      "turn": 1,
+      "instruction": "Change the background to forest, remain the brown fur bear unchanged",
+      "protocol": {
+        "version": "lance-history-bare-v2",
+        "segments": [
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 0,
+            "text": "",
+            "image_index": 0
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 1,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "current",
+            "turn": 1,
+            "text": "Change the background to forest, remain the brown fur bear unchanged",
+            "image_index": null
+          }
+        ],
+        "image_count": 1,
+        "instruction_count": 1,
+        "target_count": 1,
+        "cfg_removed_segments": [
+          2
+        ],
+        "user_prompt_preview": "[IMAGE_0]Change the background to forest, remain the brown fur bear unchanged"
+      },
+      "input_hashes": [
+        "52a53e63021758b27984b3199a57012d235e2e0ab6ff232097af328b16c14757"
+      ],
+      "output_hash": "121897aa697d97cbb4a9998e0890e5f3dd5b0b5582aa91720344c242acdf7679",
+      "output_size": [
+        768,
+        768
+      ],
+      "prefix_segments_reused": 0,
+      "attention": {
+        "sha256": "0fbcfab7c47acf5aad1fca5370edd277e0670be01fc2c77d436e1b92ca1fbfcf",
+        "max_reference_absolute_error": 0.00017023086547851562,
+        "max_probability_sum_error": 7.390975952148438e-05
+      },
+      "turn_metadata_sha256": "2a4375bb3c979b6f15b1bc85cee30ec57c610723d8c277c1373f305dfbc8ce91"
+    },
+    {
+      "session": "edival/1",
+      "turn": 2,
+      "instruction": "Add fish on the below of brown fur bear",
+      "protocol": {
+        "version": "lance-history-bare-v2",
+        "segments": [
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 0,
+            "text": "",
+            "image_index": 0
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 1,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "history",
+            "turn": 1,
+            "text": "Change the background to forest, remain the brown fur bear unchanged",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 1,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 1,
+            "text": "",
+            "image_index": 1
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 1,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 2,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "current",
+            "turn": 2,
+            "text": "Add fish on the below of brown fur bear",
+            "image_index": null
+          }
+        ],
+        "image_count": 2,
+        "instruction_count": 2,
+        "target_count": 1,
+        "cfg_removed_segments": [
+          7
+        ],
+        "user_prompt_preview": "[IMAGE_0]Change the background to forest, remain the brown fur bear unchanged\n\n[IMAGE_1]\n\nAdd fish on the below of brown fur bear"
+      },
+      "input_hashes": [
+        "52a53e63021758b27984b3199a57012d235e2e0ab6ff232097af328b16c14757",
+        "121897aa697d97cbb4a9998e0890e5f3dd5b0b5582aa91720344c242acdf7679"
+      ],
+      "output_hash": "304d6505fe07a465c5bdcdcebacfc164d30a69f718dac842cd1b6b0d3145add3",
+      "output_size": [
+        768,
+        768
+      ],
+      "prefix_segments_reused": 1,
+      "attention": {
+        "sha256": "d867bca73f697a4ac25f5d93828aea07aff00ac010cacd35f6775a699a50695d",
+        "max_reference_absolute_error": 0.0001659393310546875,
+        "max_probability_sum_error": 7.581710815429688e-05
+      },
+      "turn_metadata_sha256": "cc2641d17f64eee13081aa5ebcac00ff7dfbd0c19e11dc497a1bcace6a9bdec3"
+    },
+    {
+      "session": "edival/1",
+      "turn": 3,
+      "instruction": "Change the material of fish to glass",
+      "protocol": {
+        "version": "lance-history-bare-v2",
+        "segments": [
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 0,
+            "text": "",
+            "image_index": 0
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 1,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "history",
+            "turn": 1,
+            "text": "Change the background to forest, remain the brown fur bear unchanged",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 1,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 1,
+            "text": "",
+            "image_index": 1
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 1,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 2,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "history",
+            "turn": 2,
+            "text": "Add fish on the below of brown fur bear",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 2,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "image",
+            "role": "image",
+            "turn": 2,
+            "text": "",
+            "image_index": 2
+          },
+          {
+            "kind": "text",
+            "role": "separator",
+            "turn": 2,
+            "text": "\n\n",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "label",
+            "turn": 3,
+            "text": "",
+            "image_index": null
+          },
+          {
+            "kind": "text",
+            "role": "current",
+            "turn": 3,
+            "text": "Change the material of fish to glass",
+            "image_index": null
+          }
+        ],
+        "image_count": 3,
+        "instruction_count": 3,
+        "target_count": 1,
+        "cfg_removed_segments": [
+          12
+        ],
+        "user_prompt_preview": "[IMAGE_0]Change the background to forest, remain the brown fur bear unchanged\n\n[IMAGE_1]\n\nAdd fish on the below of brown fur bear\n\n[IMAGE_2]\n\nChange the material of fish to glass"
+      },
+      "input_hashes": [
+        "52a53e63021758b27984b3199a57012d235e2e0ab6ff232097af328b16c14757",
+        "121897aa697d97cbb4a9998e0890e5f3dd5b0b5582aa91720344c242acdf7679",
+        "304d6505fe07a465c5bdcdcebacfc164d30a69f718dac842cd1b6b0d3145add3"
+      ],
+      "output_hash": "10ca3e16d3137ce053f768bfd726187427e929b1fac7cdcc2d942ded983e2d39",
+      "output_size": [
+        768,
+        768
+      ],
+      "prefix_segments_reused": 6,
+      "attention": {
+        "sha256": "76594f5645909b6048ff13ae898c8f9428083c1b592a3f968689d96b9a1d4518",
+        "max_reference_absolute_error": 0.00020056962966918945,
+        "max_probability_sum_error": 7.450580596923828e-05
+      },
+      "turn_metadata_sha256": "eea5820c4e42c2875851cca46375f14f49ffd789ba3e2961bcd506fc5930403e"
+    }
+  ],
+  "staging_metadata_sidecars_hashed": 12,
+  "gpu0_other_task": {
+    "name": "MICE Qwen single-vote scoring",
+    "verified_continuing": true,
+    "judge_pid": 145171
+  }
+}
