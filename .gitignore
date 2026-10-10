@@ -26,3 +26,12 @@ build/
 dist/
 .pytest_cache/
 runtime/
+
+# Experimental arrays, dataset shards and scoring databases, wherever created.
+*.npz
+*.npy
+*.parquet
+*.arrow
+*.sqlite
+*.sqlite3
+*.db
