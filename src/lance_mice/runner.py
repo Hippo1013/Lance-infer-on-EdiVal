@@ -119,7 +119,7 @@ def run_session(sample, output: Path, settings: Settings, backend, *, run_id: st
             meta = {"session_fingerprint": fingerprint, "turn": turn,
                     "instruction": instruction, "input_hashes": inputs,
                     "output_hash": image_hash(result), "wall_seconds": elapsed,
-                    "protocol": protocol_manifest(list(sample.instructions[:turn])),
+                    "protocol": protocol_manifest(list(sample.instructions[:turn]), version=settings.history_protocol),
                     "backend": diagnostics}
             staged_png = png.with_suffix(".png.part")
             result.save(staged_png, format="PNG")
@@ -147,6 +147,8 @@ def parser():
     p.add_argument("--profile", choices=("single", "dp2", "cfg2"), default="single")
     p.add_argument("--gpus", default="0")
     p.add_argument("--cache-mode", choices=("none", "images", "prefix"))
+    p.add_argument("--history-protocol", choices=("lance-history-bare-v2", "lance-history-chat-v1"))
+    p.add_argument("--attention-format", choices=("target-group-mass-v1", "target-token-region-stats-v1"))
     p.add_argument("--resolution", type=int, choices=(512, 768))
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--resume", action="store_true")
@@ -166,6 +168,10 @@ def main(argv=None):
         settings = replace(settings, resolution=args.resolution)
     if args.cache_mode:
         settings = replace(settings, cache_mode=args.cache_mode)
+    if args.history_protocol:
+        settings = replace(settings, history_protocol=args.history_protocol)
+    if args.attention_format:
+        settings = replace(settings, attention_format=args.attention_format)
     args.dataset = args.dataset or DEFAULT_ROOTS[args.benchmark]
     samples = load_samples(args.dataset, args.selection, args.benchmark)
     workers = 2 if args.profile == "dp2" else 1
@@ -195,7 +201,7 @@ def main(argv=None):
         run_spec["dataset_source"] = source_identity(args.dataset)
     if args.save_attention:
         from .attention import ATTENTION_VERSION
-        run_spec["attention"] = ATTENTION_VERSION
+        run_spec["attention"] = settings.attention_format
     run_id = digest(run_spec)
     manifest = args.output / "run.json"
     if args.worker_index == -1:

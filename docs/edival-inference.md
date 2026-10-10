@@ -35,13 +35,13 @@ CSV 的 `instructions` 是 Python 列表字面量，使用 `ast.literal_eval` �
 
 官方 `multipass` 示例以当前指令编辑上一轮结果；官方 `singlepass` 则每次从原图开始，把截至该轮的指令拼成一个提示。我们使用实际结果递进的完整交错历史，是本项目选择的 Lance 输入协议，不能称为官方 singlepass，也不能声称完全复现官方示例输入条件。
 
-当前输出沿用 `edival/<image_index>/turn_0_input.png`、`turn_n.png/json` 与可选 attention 文件，方便既有历史链审计。官方评测器期望 `multipass/<index>_input_raw.png` 和 `<index>_input_raw_turn_<n>.png`；将来需显式导出对应命名与尺寸，不能只改目录名。参考：[固定版本评测代码](https://github.com/TianyuCodings/EdiVal/blob/96d34b00d7ea2dc3de90f2bb01f292f6dec6294a/eval.py)。
+当前输出沿用 `edival/<image_index>/turn_0_input.png`、`turn_n.png/json` 与可选 attention 文件，方便既有历史链审计。官方评测器期望 `multipass/<index>_input_raw.png` 和 `<index>_input_raw_turn_<n>.png`；现有 [官方评分接口](edival-scoring.md) 直接引用原图和各轮PNG，将评分结果组织为官方multipass结构，无须复制或重编码推理图像，不能只改目录名。参考：[固定版本评测代码](https://github.com/TianyuCodings/EdiVal/blob/96d34b00d7ea2dc3de90f2bb01f292f6dec6294a/eval.py)。
 
 EdiVal 的 IF/CC/VQ 与 MICE 的 IF/CC/GA 不是同一套完整评分协议。虽有共享思想和工具，背景一致性标志、逐轮对象池、聚合与 VQ 需要独立核对；本接口不启动或移植能力评分。
 
 ## 接口命令
 
-服务器已部署独立运行源码 `runtime/edival_512_20261005/`，24个冻结源码/入口哈希与GPU1的512验收完全一致，并已核对runtime内全部匹配。本次部署未改动原共享项目，启动时核对其53个源码/入口与部署前一致；其他benchmark可在原项目继续独立开发，EdiVal运行只使用冻结目录。2026-10-05 21:18（北京时间）在 tmux `lance-edival-full` 启动一次全量，仅 GPU1；输出 `outputs/edival/full_512_bare_20261005_attention/`。能力评分不执行，启动不代表全量完成。
+服务器已部署独立运行源码 `runtime/edival_512_20261005/`，24个冻结源码/入口哈希与GPU1的512验收完全一致，终态核对仍全部匹配。本次部署未改动原共享项目，启动时核对其53个源码/入口与部署前一致；其他benchmark可在原项目继续独立开发，EdiVal运行只使用冻结目录。2026-10-05 21:18（北京时间）在 tmux `lance-edival-full` 启动一次全量，于2026-10-06 04:36完成，推理只用GPU1；输出 `outputs/edival/full_512_bare_20261005_attention/`，completion exit_code=0、validation passed。推理任务本身不评分；后续官方全量评分已完成，见 [评分结果](edival-scoring-results.md)。
 
 以下 Python 命令在已配置的 Lance 环境、独立运行目录执行；正式全量包装器自行配置环境并在结束后恢复本次所用空闲 GPU 的 burn。
 
@@ -65,7 +65,7 @@ bash scripts/run_edival_job.sh 1 /home/chs/exp0_attention/Lance-infer-on-EdiVal/
 
 单卡可覆盖默认配置：`--profile single --gpus 1`；缓存可用 `--cache-mode none`，恢复必须保留原参数并加 `--resume`。输出目录需为新目录，不覆盖已有实验。
 
-## 当前验证范围
+## 历史512验证范围
 
 本地与服务器各 27 项相关 CPU 检查通过（9 项 EdiVal、15 项通用协议/历史与恢复、3 项 ImgEdit）。572 张源图解码、CRC、累计前缀和数据身份通过全量审计。双卡 dry-run 只验证分片；本次实际验收和全量均为 GPU1 单卡。
 
@@ -73,10 +73,14 @@ bash scripts/run_edival_job.sh 1 /home/chs/exp0_attention/Lance-infer-on-EdiVal/
 
 全量入口 `scripts/full_edival_job.py` 要求这份 512 验收及完全相同的数据/源码身份；每 20 秒原子更新 `status.json`，结束后完整核对 572 个会话、1716 张输出和 1716 份 attention，并写 `validation.json` / `completion.json`。首次四会话十二轮已通过实际输入链、原始图像/指令、尺寸、attention、GPU1 进程环境及冻结源码复核，见服务器任务 `launch_check.json`；这不是全量终态。失败保留所有结果，不自动重采样或择优重试。
 
+2026-10-06全量复核passed：572个原始源图/指令链、1716轮512输出/真实历史、CFG/seed、prefix复用、完整GPU1覆盖、全部attention哈希/分组/概率及24个冻结文件均通过。attention最大参考绝对误差0.00028109550、概率和误差0.00011336803；峰值PyTorch分配16954601472字节。终态时推理进程已退出，GPU1恢复原burn；查看器亦校验全部2288张HTTP图片，独立manifest已冻结。
+
+本次总耗时26305.685秒，约7小时18分；终态检查发现GPU1 burn loop于2026-10-05 21:18:26再次启动，与Lance推理并行。启动后占卡复核漏掉该情况，故耗时不能作为独占GPU性能数据；产物全部通过工程审计，未重跑或择优采样。冻结源码保持原样，下次启动须在加载期和模型就绪后检查真实任务与burn进程，不能仅凭显存暂时为空判断空闲。
+
 查看 `status.json` 不加载模型。带 `--status-only` 的 Python 入口仍需提供 `--acceptance` 参数；直接读取状态 JSON 更方便。attention 使用与前两 benchmark 相同的 `target-group-mass-v1`，保存全部 30 步、36 层、16 head 的概率分组统计，目标 query 空间取均值，不是完整逐像素矩阵。
 
 ## 结果查看页面
 
 沿用既有四图布局：全部 572 会话的原图、三轮输出与英文原指令；30 个固定随机会话另有中文辅助译文，seed20261005。页面每 20 秒更新生成数量和 attention 数量，支持已生成/中文抽查筛选、搜索与放大对比。地址 <http://127.0.0.1:8770>，服务器仅监听回环，经 SSH 转发访问；使用方法见 [EdiVal 页面说明](edival-review.md)。
 
-推理与完整复核通过后，独立查看任务自动逐一校验 2288 张 HTTP 图片字节，并冻结独立 review manifest。查看器与译文不修改模型输入或推理产物。
+独立查看任务已于2026-10-06 04:36:57（北京时间）逐一校验2288张HTTP图片字节并冻结review manifest，查看validation passed。查看器与译文不修改模型输入或推理产物。

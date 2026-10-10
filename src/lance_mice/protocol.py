@@ -8,6 +8,7 @@ from dataclasses import asdict, dataclass
 from typing import Any
 
 PROTOCOL_VERSION = "lance-history-bare-v2"
+CHAT_PROTOCOL_VERSION = "lance-history-chat-v1"
 # Preserve original per-session noise/VAE seeds across this prompt-only change.
 RNG_NAMESPACE = "lance-history-v1"
 LEGACY_PROTOCOL_VERSION = "lance-history-v1"
@@ -44,9 +45,10 @@ class Segment:
 def history_segments(instructions: list[str], *, version: str = PROTOCOL_VERSION) -> list[Segment]:
     if not instructions or any(not isinstance(x, str) or not x.strip() for x in instructions):
         raise ValueError("Expected nonempty raw instructions")
-    if version not in {PROTOCOL_VERSION, LEGACY_PROTOCOL_VERSION}:
+    if version not in {PROTOCOL_VERSION, CHAT_PROTOCOL_VERSION, LEGACY_PROTOCOL_VERSION}:
         raise ValueError(f"Unknown history protocol: {version}")
     legacy = version == LEGACY_PROTOCOL_VERSION
+    chat = version == CHAT_PROTOCOL_VERSION
     # Empty labels remain as zero-token CFG/cache boundaries, never prompt text.
     segments = [Segment("image", "image", 0, image_index=0)]
     if legacy:
@@ -57,9 +59,11 @@ def history_segments(instructions: list[str], *, version: str = PROTOCOL_VERSION
         segments.append(Segment("text", "label", i, f"{label} — Turn {i}\n" if legacy else ""))
         segments.append(Segment("text", "current" if current else "history", i, instruction))
         if not current:
-            segments.append(Segment("text", "separator", i, "\n\n"))
+            segments.append(Segment("text", "separator", i,
+                "<|im_end|>\n<|im_start|>assistant\n" if chat else "\n\n"))
             segments.append(Segment("image", "image", i, image_index=i))
-            segments.append(Segment("text", "separator", i, "\n\n"))
+            segments.append(Segment("text", "separator", i,
+                "<|im_end|>\n<|im_start|>user\n" if chat else "\n\n"))
     return segments
 
 

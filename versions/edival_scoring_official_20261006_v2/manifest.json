@@ -1,0 +1,24 @@
+{
+  "version": "edival_scoring_official_20261006_v2",
+  "server": "a800_0",
+  "server_source": "/home/chs/exp0_attention/Lance-infer-on-EdiVal/runtime/edival_scoring_official_20261006_v2",
+  "scope": "Exact source identity; no experimental data",
+  "files": {
+    "scripts/edival_scoring.py": {
+      "local_source": "versions/edival_scoring_official_20261006_v2/source/scripts/edival_scoring.py",
+      "sha256": "b1db16da15caf03ee3ffc3dbfc0c92c00d629bbf80dcb8a86a55da0e7448e956"
+    },
+    "scripts/full_edival_scoring_job.py": {
+      "local_source": "scripts/full_edival_scoring_job.py",
+      "sha256": "f19d751ec346fcee8a10e858bffb81bd7136d5c5375261385e1978755bcf2369"
+    },
+    "configs/edival_dataset.json": {
+      "local_source": "configs/edival_dataset.json",
+      "sha256": "84198cc582da80c02c184a72fdb0687d543b50816c069178230f2aeac1882d8f"
+    },
+    "configs/edival_scoring_models.json": {
+      "local_source": "configs/edival_scoring_models.json",
+      "sha256": "2972cc0a3493e02e970e136c4ae5477bc41034f2145f3fce978492f3db1f11ce"
+    }
+  }
+}

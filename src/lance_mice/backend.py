@@ -20,7 +20,7 @@ def history_payload(session_id, images, instructions, settings, *, audit=False, 
         "prompt": instructions[-1], "modalities": ["image"],
         "multi_modal_data": {"image": images},
         "extra_args": {"lance_history": {
-            "protocol": PROTOCOL_VERSION, "session_id": session_id,
+            "protocol": settings.history_protocol, "session_id": session_id,
             "instructions": list(instructions), "image_hashes": [image_hash(im) for im in images],
             "settings": asdict(settings), "audit": audit, "end_session": end_session,
         }},
@@ -55,6 +55,8 @@ class OmniBackend:
             raise ValueError("Only one or two CFG ranks are supported")
         if cfg_parallel_size == 2 and settings.cfg_text_scale <= 1:
             raise ValueError("CFG-2 requires text guidance > 1")
+        if settings.attention_format == 'target-token-region-stats-v2' and pipeline_class == 'lance_mice.omni_pipeline.LanceHistoryPipeline':
+            pipeline_class = 'lance_mice.semantic_pipeline.SemanticLancePipeline'
         self.settings, self.audit = settings, audit
         self.generated_turns = []
         # Must be set before vLLM/Torch imports and before spawning workers.

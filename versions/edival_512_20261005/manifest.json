@@ -1,0 +1,104 @@
+{
+  "version": "edival_512_20261005",
+  "server": "a800_0",
+  "server_source": "/home/chs/exp0_attention/Lance-infer-on-EdiVal/runtime/edival_512_20261005",
+  "scope": "Exact source identity for historical experiment; no experimental data",
+  "files": {
+    "configs/edival_dataset.json": {
+      "sha256": "84198cc582da80c02c184a72fdb0687d543b50816c069178230f2aeac1882d8f",
+      "local_source": "configs/edival_dataset.json"
+    },
+    "pyproject.toml": {
+      "sha256": "35fc468406fa0e25fa81e57dc18bf817eee41fa0930db983397018895a8f8a58",
+      "local_source": "pyproject.toml"
+    },
+    "scripts/edival_acceptance.py": {
+      "sha256": "77d6647e2c762f7217d06eeee0a5ba3ea56ee67cab4f2d064b4446acdb8cf250",
+      "local_source": "scripts/edival_acceptance.py"
+    },
+    "scripts/edival_data_check.py": {
+      "sha256": "8c603fa940f6a9ea6bdc61bb8f13aedb49f46051599feaee9e299f51bf95004a",
+      "local_source": "scripts/edival_data_check.py"
+    },
+    "scripts/full_edival_job.py": {
+      "sha256": "07bbb01d00e396a8214627068ed16b20da0111c8881339d99296094f0597e5c4",
+      "local_source": "scripts/full_edival_job.py"
+    },
+    "scripts/run_edival_job.sh": {
+      "sha256": "49b4618a8e381ca6bd2a1922d41f0871ccc20efcf35c8d3a2c685c0acb65912a",
+      "local_source": "scripts/run_edival_job.sh"
+    },
+    "scripts/validate_edival_full.py": {
+      "sha256": "d746eb1c111e75f1b9ece0edbee4357e3b32cc2e47a5f0ff5c598042e84c3dfb",
+      "local_source": "scripts/validate_edival_full.py"
+    },
+    "src/lance_mice/__init__.py": {
+      "sha256": "a6b2ce11819bd1bb3c27be2246084597ae5dc22c94ebe11128cd2dd4f916c7e6",
+      "local_source": "src/lance_mice/__init__.py"
+    },
+    "src/lance_mice/acceptance.py": {
+      "sha256": "c6dfcc8fa0bff9fcb1dcdf98099a048a9a99ae1415b3586704dc2bcd97914570",
+      "local_source": "versions/edival_512_20261005/source/src/lance_mice/acceptance.py"
+    },
+    "src/lance_mice/attention.py": {
+      "sha256": "58f8589e49b305ca7ef84538ff9921f58df30d198cb89231de92007b263a136f",
+      "local_source": "src/lance_mice/attention.py"
+    },
+    "src/lance_mice/backend.py": {
+      "sha256": "d056090d1163e78faf9145b6b023e4b40862e79acd967a53c83f7def56cc09a0",
+      "local_source": "versions/edival_512_20261005/source/src/lance_mice/backend.py"
+    },
+    "src/lance_mice/dataset.py": {
+      "sha256": "d9393858ec69b74de748c06fcff9f4fb738b9d7a3c23b9263e6a96cf70a3482d",
+      "local_source": "src/lance_mice/dataset.py"
+    },
+    "src/lance_mice/edival.py": {
+      "sha256": "4bf18b7e3fd15390347c05ffc5725b9ef5e0c83b04439810a82bd73ca1c85462",
+      "local_source": "src/lance_mice/edival.py"
+    },
+    "src/lance_mice/edival_dataset.py": {
+      "sha256": "babfef3cd8e27c8f659976a2eec3350dd55e5ed0a5182040407204b0e6bc2a2d",
+      "local_source": "src/lance_mice/edival_dataset.py"
+    },
+    "src/lance_mice/images.py": {
+      "sha256": "b30f407dcd2afba9c7a6e0c10d27955d92f30ecddb3b727e49ad2004a74328e0",
+      "local_source": "src/lance_mice/images.py"
+    },
+    "src/lance_mice/imgedit.py": {
+      "sha256": "5f3feae099a43ef07e2a34ebd025b23f819a95e3484f4de9b3c535d00a7783ad",
+      "local_source": "src/lance_mice/imgedit.py"
+    },
+    "src/lance_mice/omni_pipeline.py": {
+      "sha256": "77208947be9cece8f22e20169422fe28edb8eaa8a8721c25a514d40040933069",
+      "local_source": "versions/edival_512_20261005/source/src/lance_mice/omni_pipeline.py"
+    },
+    "src/lance_mice/performance.py": {
+      "sha256": "72539860972886ff59690db663ea3318e0769ab8feec71a76d827bcd40369e18",
+      "local_source": "src/lance_mice/performance.py"
+    },
+    "src/lance_mice/protocol.py": {
+      "sha256": "749b76b4af036b2d88c942e8612bd2e2c91faf248f14bdb985acf4a885766cca",
+      "local_source": "versions/edival_512_20261005/source/src/lance_mice/protocol.py"
+    },
+    "src/lance_mice/runner.py": {
+      "sha256": "e2f17e7e8e5e4f7264026bf45d860a2b35725b165054d341ed6216fec8331366",
+      "local_source": "versions/edival_512_20261005/source/src/lance_mice/runner.py"
+    },
+    "src/lance_mice/scoring_qwen_once.py": {
+      "sha256": "806dbee686d49de9fc995232d38e55ad3ff0901fb5ac73651c0ba466f9ad356e",
+      "local_source": "versions/edival_512_20261005/src/lance_mice/scoring_qwen_once.py"
+    },
+    "src/lance_mice/settings.py": {
+      "sha256": "1d3104ed948c9fc78c65b6e30131701c087bfee49c22a412408a95212e1a3746",
+      "local_source": "versions/edival_512_20261005/source/src/lance_mice/settings.py"
+    },
+    "src/lance_mice/single_turn_probe.py": {
+      "sha256": "53833468e5ab1a0c60980738dff7b1fd5974e829ccb3788362d62acd1ffffc63",
+      "local_source": "src/lance_mice/single_turn_probe.py"
+    },
+    "src/lance_mice/text_artifact_probe.py": {
+      "sha256": "72a183dcadc095a854d06c29d9400568706ce0bc62dd435667ee6ea25721450e",
+      "local_source": "src/lance_mice/text_artifact_probe.py"
+    }
+  }
+}

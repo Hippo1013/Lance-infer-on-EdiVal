@@ -146,7 +146,11 @@ class LanceHistoryPipeline(LancePipeline):
                 is_causal=False, **kwargs).past_key_values
         ctx["kv_lens"], ctx["ropes"] = lens, ropes
         trace.append({"kind": "vit", "image_index": image_index, "tokens": [start, lens[0]],
-                      "position_hash": self._position_hash(inp["packed_position_ids"])})
+                      "position_hash": self._position_hash(inp["packed_position_ids"]),
+                      "grid_hw": [int(inp["_lance_grid_thw"][0, 1]) // int(self.bagel.vit_model.spatial_merge_size),
+                                  int(inp["_lance_grid_thw"][0, 2]) // int(self.bagel.vit_model.spatial_merge_size)],
+                      "spatial_tokens": [start + 1, lens[0] - 1],
+                      "source_size": list(image.size), "geometry": self._crop_geometry(image.size, vit=True)})
 
         # Each image has its own VAE sample. Both CFG branches later fork this
         # shared prefix, so they cannot accidentally receive different samples.
@@ -170,24 +174,48 @@ class LanceHistoryPipeline(LancePipeline):
                 self.vae, ctx["past_key_values"], **inp)
         ctx["kv_lens"], ctx["ropes"] = lens, ropes
         trace.append({"kind": "vae", "image_index": image_index, "tokens": [start, lens[0]],
-                      "position_hash": self._position_hash(inp["packed_position_ids"])})
+                      "position_hash": self._position_hash(inp["packed_position_ids"]),
+                      "grid_hw": [target_size[1] // 16, target_size[0] // 16],
+                      "spatial_tokens": [start + 1, lens[0] - 1],
+                      "source_size": list(image.size), "target_size": list(target_size),
+                      "geometry": self._crop_geometry(image.size, target_size=target_size)})
+
+    def _crop_geometry(self, source_size, *, vit=False, target_size=None):
+        w,h=source_size
+        if vit:
+            buckets=self.bagel._lance_compute_vit_buckets()
+            (bh,bw),_=min(buckets,key=lambda item:abs(w/h-item[1]))
+            target_size=(bw,bh)
+        bw,bh=target_size
+        ratio=bw/bh
+        cw,ch=(w,round(w/ratio)) if w/h<ratio else (round(h*ratio),h) if w/h>ratio else (w,h)
+        left,top=(w-cw)//2,(h-ch)//2
+        dw,dh=(bw-bw%28,bh-bh%28) if vit else (bw,bh)
+        dl,dt=(bw-dw)//2,(bh-dh)//2
+        return dict(source_crop_box=[left,top,left+cw,top+ch],resized_size=[bw,bh],
+            post_resize_crop_box=[dl,dt,dl+dw,dt+dh],encoded_size=[dw,dh],interpolation='bicubic',
+            layout='row-major',region_assignment='patch centers in encoded image; floor(center*8/dimension)')
 
     def _position_hash(self, tensor):
         return digest(tensor.tolist()) if self._audit else None
 
     def _history_segments(self, instructions):
-        return history_segments(instructions)
+        return history_segments(instructions, version=self._history_protocol)
 
     def _text(self, ctx, segment, trace):
         start = ctx["kv_lens"][0]
         self._raw_text_prefill(ctx, segment.text)
         trace.append({"kind": "text", "role": segment.role, "turn": segment.turn,
                       "tokens": [start, ctx["kv_lens"][0]], "text": segment.text})
+        if segment.role in {"history", "current"}:
+            encoded = self.tokenizer(segment.text, add_special_tokens=False, return_offsets_mapping=True)
+            trace[-1].update(token_ids=encoded["input_ids"], offsets=encoded["offset_mapping"])
 
     def _forward_history(self, req, history):
-        if history.get("protocol") != PROTOCOL_VERSION:
-            raise ValueError("History protocol version mismatch")
         settings = Settings(**{**history["settings"], "cfg_interval": tuple(history["settings"]["cfg_interval"])})
+        if history.get("protocol") != settings.history_protocol:
+            raise ValueError("History protocol version mismatch")
+        self._history_protocol = settings.history_protocol
         instructions = history["instructions"]
         session_id = history["session_id"]
         images = (req.prompts[0].get("multi_modal_data") or {}).get("image")
@@ -264,7 +292,12 @@ class LanceHistoryPipeline(LancePipeline):
 
         observer = None
         if history.get("attention_output"):
-            from .attention import AttentionObserver
+            if settings.attention_format == "target-token-region-stats-v2":
+                from .attention_regions_v2 import RegionAttentionObserver as AttentionObserver
+            elif settings.attention_format == "target-token-region-stats-v1":
+                from .attention_regions import RegionAttentionObserver as AttentionObserver
+            else:
+                from .attention import AttentionObserver
             observer = AttentionObserver(self.bagel, gen_trace, gen["kv_lens"][0],
                 int(gen_input["packed_text_ids"].numel()), int(gen_input["packed_init_noises"].shape[0]), settings.steps)
         with self._measure("denoise"), torch.autocast(**self._autocast_kwargs()), (observer or nullcontext()):
@@ -284,7 +317,7 @@ class LanceHistoryPipeline(LancePipeline):
         self._times["prefill_excluding_encoders"] = max(0.0, self._times["prefill_total"]
             - self._times.get("vit_encode", 0) - self._times.get("vae_encode", 0))
         metadata = {
-            "protocol": PROTOCOL_VERSION, "session_id": session_id, "turn": len(instructions),
+            "protocol": settings.history_protocol, "session_id": session_id, "turn": len(instructions),
             "image_hashes": image_hashes, "seed": seed, "size": target_size,
             "prefix_segments_reused": reused, "counts": self._counts,
             "seconds": self._times, "positive_trace": gen_trace, "negative_trace": neg_trace,

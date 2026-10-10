@@ -1,5 +1,6 @@
 """Adapted Edit-R2 IF rules at 26b55829246e1a67fc3c8d522324fee3d49cd954.
-Only I/O injection, debug removal and exception propagation changed. See NOTICE.
+I/O injection, debug removal, exception propagation and minimal output
+instructions changed. Evaluation rules are preserved. See NOTICE.
 """
 from __future__ import annotations
 from typing import Tuple
@@ -42,12 +43,17 @@ def _count_object(boxes, iou_threshold=0.8):
             i += 1
         if not boxes_removed:
             return len(boxes)
-VLM_ADD_PROMPT = 'The first image is the original, and the second image reflects the changes made according to the editing instruction in subject addition. Can you determine if the editing instruction was successfully applied?\nThe editing instruction is: {instruction}\n\nPlease respond with "yes" or "no.'
-VLM_REPLACE_PROMPT = 'The first image is the original, and the second image reflects the changes made according to the editing instruction in subject replacement. Can you determine if the editing instruction was successfully applied?\nThe editing instruction is: {instruction}\n\nPlease respond with "yes" or "no.'
-VLM_COLOR_PROMPT = "Look at the object in the image. Is the {object_name} {new_color}? Please answer only 'YES' or 'NO'."
-VLM_MATERIAL_PROMPT = "Is it possible that the {object_name} is made of {new_material}? Please answer only 'YES' or 'NO'."
-VLM_TEXT_PROMPT = 'What text do you see in this image? Output only the text content, nothing else.'
-VLM_BACKGROUND_PROMPT = "Look at the background of this image. Does the background show [{background}]? Please answer only 'YES' or 'NO'."
+VLM_BINARY_OUTPUT = 'Return exactly one lowercase word: yes or no. Do not output explanations, punctuation, Markdown, or any other text.'
+VLM_ADD_PROMPT = 'The first image is the original, and the second image reflects the changes made according to the editing instruction in subject addition. Can you determine if the editing instruction was successfully applied?\nThe editing instruction is: {instruction}\n\n' + VLM_BINARY_OUTPUT
+VLM_REPLACE_PROMPT = 'The first image is the original, and the second image reflects the changes made according to the editing instruction in subject replacement. Can you determine if the editing instruction was successfully applied?\nThe editing instruction is: {instruction}\n\n' + VLM_BINARY_OUTPUT
+VLM_COLOR_PROMPT = 'Look at the object in the image. Is the {object_name} {new_color}? ' + VLM_BINARY_OUTPUT
+VLM_MATERIAL_PROMPT = 'Is it possible that the {object_name} is made of {new_material}? ' + VLM_BINARY_OUTPUT
+VLM_TEXT_PROMPT = ('What text do you see in this image? Output only the text content, nothing else. '
+                   'Visit each distinct visible text region once, in top-to-bottom, left-to-right order. '
+                   'Do not transcribe the same region repeatedly. If identical text appears in different '
+                   'visible regions, retain those actual occurrences. After all visible text regions '
+                   'have been transcribed, stop.')
+VLM_BACKGROUND_PROMPT = 'Look at the background of this image. Does the background show [{background}]? ' + VLM_BINARY_OUTPUT
 VLM_STRICT_COUNT_PROMPT = "You are asked to count the number of an object. Please answer only the number. \nFor example, if there are 3 dogs, you should answer '3'. If there is no dog, you should answer '0'.\n\nObject name: {object_name}\nNumber of objects:"
 
 def parse_instruction(task_type, instruction):

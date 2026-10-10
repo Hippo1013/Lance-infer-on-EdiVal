@@ -2,12 +2,12 @@
 
 ## 范围与配置
 
-当前 `mice-qwen-once-v3`对MICE bare-v2的CM/CU各360会话、720会话2160轮评分。仅GPU0、Qwen3.6-27B一票；结果经用户查看后再决定后续，不自动追加Gemma或第二票。GPU1由EdiVal任务管理。
+本文维护单票、人工未决与首答复用规则，运行表和GPU0调度描述属于2026-10-06已完成的历史v3。2026-10-07六组实验的bare/chat各720会话2160轮同样仅Qwen3.6-27B一票，采用已批准的最小prompt修改和四分片调度；结果、16项待审及位置见 [六组结果](sixrun-results-20261007.md)，不自动追加Gemma或第二票。
 
 | 项目 | 固定身份 |
 | --- | --- |
 | 输入 | `outputs/mice/full_bare_20261004_attention/` |
-| 当前输出 / tmux | `outputs/scoring/full_qwen_once_pending_v3/` / mice-score-qwen-once |
+| 历史输出 / tmux | `outputs/scoring/full_qwen_once_pending_v3/` / mice-score-qwen-once |
 | 采样 | temperature0.6、vote1、seed42、BF16、context16384、max_tokens2048、enable_thinking=False |
 | 图像 | 原始RGB、无损PNG，不缩图替换 |
 
@@ -39,9 +39,13 @@ prepare重新审计全量输入，只复用已停止且锁定的生产任务。�
 
 历史目录full_dual_v2、full_qwen_once_v1、full_qwen_once_pending_v2保留原manifest。v1因GA矛盾停止，v2因OCR截断停止，v3迁移已有2160轮测量、6060检测缓存、181已处理轮、305完整回答与1截断首尝试。CPU单票/累计/第二票拒绝及两类策略回归、真实无模型迁移通过；不表示裁判准确率已校准。
 
+## 全量结果状态
+
+2026-10-06 05:12（北京时间），v3完成720会话2160轮，summary complete、validation passed、completion exit_code=0。IF_qwen/CC/GA_qwen/GA_prefix_qwen为0.418139535/0.677011408/0.275082431/0.323639775，有效分母2150/1883/2123/2132。自动版31个直接人工项含28标签待定与3回答不完整，另37个累计GA轮受未决前缀影响。2026-10-06人工31/31已明确判定，独立第一版汇总见 [第一版结果](mice-first-edition-results.md)，原目录保留自动版口径。GPU0恢复burn，mice-v2监控暂停，等待用户决定后续评分。该目录为已完成证据，不得用下面历史启动命令重新启动。
+
 ## 运行与终态
 
-在服务器项目目录执行；活动任务不得重复启动。当前v3恢复命令：
+在服务器项目目录执行；活动任务不得重复启动。历史v3恢复启动命令（已完成，不再执行）：
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 /home/chs/conda/envs/lance/bin/python scripts/full_mice_qwen_once_job.py \

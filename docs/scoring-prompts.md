@@ -1,8 +1,8 @@
 # MICE 裁判提示词
 
-以下正文由当前Qwen单票v3与历史双裁判profile共用。Qwen3.6-27B与Gemma-4-31B-it没有模型专属评分标准；不同profile只决定模型、票数和采样身份。当前只运行Qwen一票，不自动调用Gemma。
+下文完整基础正文属于2026-10-06单票v3与历史双裁判profile；2026-10-07六组实验已采用文末的最小输出约束修改。历史原正文与新运行分别绑定冻结源码，不将旧正文当作新prompt身份。Qwen3.6-27B与Gemma-4-31B-it没有模型专属评分标准；不同profile只决定模型、票数和采样身份。六组实验仅Qwen3.6-27B一票，不自动调用Gemma。
 
-请求由一条 user 消息组成：先放对应图像，再放下面的文字；程序没有另加 system 消息。花括号字段由当前样本的标注/指令填入。当前Qwen单票v3为temperature=0.6、vote=1/seed42、context16384、max_tokens=2048、enable_thinking=False；历史双裁判v2为每位裁判2次、seed42/43。具体身份以manifest为准，见 [当前协议](scoring-qwen-once.md)。
+请求由一条 user 消息组成：先放对应图像，再放下面的文字；程序没有另加 system 消息。花括号字段由当前样本的标注/指令填入。历史Qwen单票v3为temperature=0.6、vote=1/seed42、context16384、max_tokens=2048、enable_thinking=False；历史双裁判v2为每位裁判2次、seed42/43。具体身份以manifest为准，见 [单票协议](scoring-qwen-once.md)。
 
 来源：Edit-R2 固定提交 `26b55829246e1a67fc3c8d522324fee3d49cd954` 的 `rewards/reward_server/edival_reward_server.py` 与 `flow_grpo/edival_client.py`。本文从已有本地模板整理，不执行模型调用或重新验证。
 
@@ -37,7 +37,7 @@ Please respond with "yes" or "no.
 图片顺序：上一轮图、当前图。
 
 ```text
-Is the {object_name} now {new_color}? Answer YES or NO only.
+Look at the object in the image. Is the {object_name} {new_color}? Please answer only 'YES' or 'NO'.
 ```
 
 ### 材质修改
@@ -45,7 +45,7 @@ Is the {object_name} now {new_color}? Answer YES or NO only.
 图片顺序：上一轮图、当前图。
 
 ```text
-Is the {object_name} now made of {new_material}? Answer YES or NO only.
+Is it possible that the {object_name} is made of {new_material}? Please answer only 'YES' or 'NO'.
 ```
 
 ### 文字识别
@@ -215,7 +215,7 @@ Look at the background of this image. Does the background show [{background}]? P
 
 ## 请求示例
 
-以第一轮颜色修改为例，当前Qwen的一票收到如下内容；历史Gemma及第二票使用相同正文：
+以第一轮颜色修改为例，历史基础提示词的单票请求如下；历史Gemma及第二票使用相同正文：
 
 ```text
 user:
@@ -225,3 +225,65 @@ user:
 ```
 
 上述颜色例子仅说明字段填充，不是一次新评分。完整 GA 正文均在上方列出。
+
+## 六组实验采用的输出约束
+
+2026-10-07 bare／chat两组MICE评分采用同一最小修改版。评分问题、检测／文字比对、CM／CU标准、XML解析器、图像顺序和单票采样保持原协议；没有采用JSON、first_failure、新属性优先级或答案示例。以下IF正文直接对应开发源码与六组冻结版。
+
+### 对象添加输出约束
+
+```text
+The first image is the original, and the second image reflects the changes made according to the editing instruction in subject addition. Can you determine if the editing instruction was successfully applied?
+The editing instruction is: {instruction}
+
+Return exactly one lowercase word: yes or no. Do not output explanations, punctuation, Markdown, or any other text.
+```
+
+### 对象替换输出约束
+
+```text
+The first image is the original, and the second image reflects the changes made according to the editing instruction in subject replacement. Can you determine if the editing instruction was successfully applied?
+The editing instruction is: {instruction}
+
+Return exactly one lowercase word: yes or no. Do not output explanations, punctuation, Markdown, or any other text.
+```
+
+### 颜色修改输出约束
+
+```text
+Look at the object in the image. Is the {object_name} {new_color}? Return exactly one lowercase word: yes or no. Do not output explanations, punctuation, Markdown, or any other text.
+```
+
+### 材质修改输出约束
+
+```text
+Is it possible that the {object_name} is made of {new_material}? Return exactly one lowercase word: yes or no. Do not output explanations, punctuation, Markdown, or any other text.
+```
+
+### 文字识别输出约束
+
+```text
+What text do you see in this image? Output only the text content, nothing else. Visit each distinct visible text region once, in top-to-bottom, left-to-right order. Do not transcribe the same region repeatedly. If identical text appears in different visible regions, retain those actual occurrences. After all visible text regions have been transcribed, stop.
+```
+
+### 背景修改输出约束
+
+```text
+Look at the background of this image. Does the background show [{background}]? Return exactly one lowercase word: yes or no. Do not output explanations, punctuation, Markdown, or any other text.
+```
+
+### GA补充输出契约
+
+CM与CU均在原完整正文末尾追加下段，不替换评估标准：
+
+```text
+补充输出要求：
+1. 在输出某轮判定前完成该轮检查，不输出暂定判定。
+2. 每个被评估轮次的answer_turn_i和reason_turn_i各输出一次；不重复编号，不补写修正版本。
+3. 每轮理由仅用一句简短说明，与该轮最终判定一致。
+4. 首个no轮次后停止，answer_final必须为no；只有全部已提供轮次均为yes，answer_final才能为yes。
+5. 开始标签与结束标签必须正确配对。
+6. 只输出最终标签结果，不输出推演、重读或自我修正过程。
+```
+
+新实验保留16个首次回答待审组件；原始回答不重采样，详见 [六组结果](sixrun-results-20261007.md)。这次全量完成证明不中断策略和产物覆盖，不单独证明提示词提高裁判准确性。

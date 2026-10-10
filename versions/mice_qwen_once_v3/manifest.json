@@ -1,0 +1,76 @@
+{
+  "version": "mice_qwen_once_v3",
+  "server": "a800_0",
+  "server_source": "/home/chs/exp0_attention/Lance-infer-on-EdiVal",
+  "scope": "Exact source identity; no experimental data",
+  "files": {
+    "configs/scoring_models.json": {
+      "local_source": "configs/scoring_models.json",
+      "sha256": "1419bbb0d2553651d99d00d7e8e31e4f6d296dcd331b618f610ef982d851d2e0"
+    },
+    "scripts/run_mice_scoring.sh": {
+      "local_source": "scripts/run_mice_scoring.sh",
+      "sha256": "d092bfc3180e4d30c91ef9d8c47d763cfdc22982e2fe84ad25a488070c622ca9"
+    },
+    "scripts/score_mice.py": {
+      "local_source": "scripts/score_mice.py",
+      "sha256": "6eeb97b8b93cc24fbedd12bbdfb154a2b9798f480996f4e57c6ee77209217289"
+    },
+    "src/lance_mice/scoring/__init__.py": {
+      "local_source": "src/lance_mice/scoring/__init__.py",
+      "sha256": "5d7cba45e66055efc9b847fdd6b402d9f3de7e92cf56e1df9b2cd17d52a29db1"
+    },
+    "src/lance_mice/scoring/core.py": {
+      "local_source": "src/lance_mice/scoring/core.py",
+      "sha256": "a67288dc9e165aea50d314844b45fef5c9eac1b67fa507a80486d267ef3438c1"
+    },
+    "src/lance_mice/scoring/if_rules.py": {
+      "local_source": "versions/mice_qwen_once_v3/source/src/lance_mice/scoring/if_rules.py",
+      "sha256": "d16fb18de206bebdc3c46580884a7c3d99ecc2f35ae4211b4b615cd8d8ab1249"
+    },
+    "src/lance_mice/scoring/judge.py": {
+      "local_source": "src/lance_mice/scoring/judge.py",
+      "sha256": "5c1775472b2594018e99d3aa59a994703218673b520216fa86fc7d0c7f8fd69b"
+    },
+    "src/lance_mice/scoring/metrics.py": {
+      "local_source": "src/lance_mice/scoring/metrics.py",
+      "sha256": "27cfab881ad61c8270ed9a186cbbcd6961b6f4fdcfb06a513feec157c1cf5908"
+    },
+    "src/lance_mice/scoring/prompts.py": {
+      "local_source": "versions/mice_qwen_once_v3/source/src/lance_mice/scoring/prompts.py",
+      "sha256": "779548301dbe01275cedddd237917c622a9c18b7c7afe6202313f6734144673c"
+    },
+    "src/lance_mice/scoring/request_cache.py": {
+      "local_source": "src/lance_mice/scoring/request_cache.py",
+      "sha256": "5545c15c925d6b6d2e82adcaa4c72542af10456a9a2083061ddfb55df1ae62cc"
+    },
+    "src/lance_mice/scoring/runner.py": {
+      "local_source": "src/lance_mice/scoring/runner.py",
+      "sha256": "955d378956d0530b24551879e86bf5561f590aa7ddb31e30e009463af13a78b1"
+    },
+    "src/lance_mice/scoring_qwen_once.py": {
+      "local_source": "src/lance_mice/scoring_qwen_once.py",
+      "sha256": "5e32bac15e02235801b70c362c86f46b2bc62b179d7ad4050b390a9e8d732ea4"
+    },
+    "scripts/score_mice_qwen_once.py": {
+      "local_source": "scripts/score_mice_qwen_once.py",
+      "sha256": "ffc648900d25ef374054f1d63d984647a6ac1bac421a6e53a53596726413ba88"
+    },
+    "scripts/run_mice_qwen_scoring.sh": {
+      "local_source": "scripts/run_mice_qwen_scoring.sh",
+      "sha256": "5ef1dc9003c8ecfa723233a61a04ef31d3dd5613eec964f6a6b7d24c7b1055e7"
+    },
+    "scripts/full_mice_qwen_once_job.py": {
+      "local_source": "scripts/full_mice_qwen_once_job.py",
+      "sha256": "85465b16103ae27407a596fe1bfcc05fd4e224af928d1d67688a9c75197c1091"
+    },
+    "scripts/full_mice_scoring_job.py": {
+      "local_source": "scripts/full_mice_scoring_job.py",
+      "sha256": "9787dcd8eeacbfc2d1e409ec9cfb1db103da0dace8832e874935d031930ff808"
+    },
+    "src/lance_mice/scoring_pending.py": {
+      "local_source": "src/lance_mice/scoring_pending.py",
+      "sha256": "843a8a3cd5cd1e54aa44a76fa7e39ee1ca303d320c3b02cc8aa942f1d1b9d4b3"
+    }
+  }
+}

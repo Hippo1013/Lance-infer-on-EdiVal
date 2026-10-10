@@ -1,6 +1,6 @@
 # EdiVal 全量结果查看
 
-地址：<http://127.0.0.1:8770>。服务器只监听回环地址，由本机 SSH 转发访问，图片与 attention 留在服务器。
+地址：<http://127.0.0.1:8770>。2026-10-06 04:36（北京时间）已完成全量推理与页面复核：572会话、1716轮/attention及2288张HTTP图片全部通过，独立manifest已冻结。服务器只监听回环地址，由本机 SSH 转发访问，图片与 attention 留在服务器。
 
 ## 数据与交互
 
@@ -8,7 +8,7 @@
 
 所有英文指令来自本次固定运行清单，保留原始引号与标点。`configs/edival_review_30_zh.json` 用种子20261005均匀抽取30个会话，提供90条中文辅助译文；其余会话直接显示英文。译文与英文序列及本次 run fingerprint 绑定，不修正原指令矛盾，不进入模型输入。
 
-查看器只读推理产物。本次按用户要求不提供评分表或启动能力评分。attention 与前两 benchmark 相同，为每轮30步×36层×16head的概率分组统计，目标query空间取均值；页面显示文件保存数量，完整有效性由推理复核检查。
+查看器只读推理产物。本页面不提供评分表或调用评分；该历史运行后续的官方评分已完成，见 [评分结果](edival-scoring-results.md)。attention 与前两 benchmark 相同，为每轮30步×36层×16head的概率分组统计，目标query空间取均值；页面显示文件保存数量，完整有效性由推理复核检查。
 
 ## 服务与路径
 
@@ -21,12 +21,12 @@
 | 实际图片/attention | 上述目录的 `run/edival/<image_index>/` |
 | 独立查看清单与日志 | `outputs/review/edival_512_bare_20261005/` |
 | 查看服务 | tmux `edival-review`，127.0.0.1:8770 |
-| 完成后的 HTTP 复核 | tmux `edival-review-finish` |
+| 已完成的 HTTP 复核 | 原tmux `edival-review-finish`，终态为查看目录 `validation.json` passed |
 
 查看服务已在服务器启动；需要本机重连时执行：
 
 ```bash
-ssh -N -L 127.0.0.1:8770:127.0.0.1:8770 -o ExitOnForwardFailure=yes a800x2
+ssh -N -L 127.0.0.1:8770:127.0.0.1:8770 -o ExitOnForwardFailure=yes a800_0
 ```
 
 服务器重启后，在确认8770空闲、现有同名服务未运行后恢复查看器：

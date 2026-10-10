@@ -1,0 +1,20 @@
+{
+  "protocol": "edival-official",
+  "edival_revision": "96d34b00d7ea2dc3de90f2bb01f292f6dec6294a",
+  "hpsv3_package_version": "1.0.0",
+  "hpsv3_reference_revision": "bd0c5fcb5f587617b0169c07222ab78d01e2f3c2",
+  "models": [
+    {"name": "Qwen2-VL-7B-Instruct", "repo": "Qwen/Qwen2-VL-7B-Instruct", "revision": "eed13092ef92e448dd6875b2a00151bd3f7db0ac", "weights": "*.safetensors"},
+    {"name": "RAHF", "repo": "C-Tianyu/RAHF", "revision": "003923c4894db32b9d85da593e45977e8207f06e", "weights": "rahf_model.pt"},
+    {"name": "vit-large-patch16-384", "repo": "google/vit-large-patch16-384", "revision": "4b143e77059a54c70b348a76677ab9946f584e13", "weights": "pytorch_model.bin"},
+    {"name": "t5-base", "repo": "google-t5/t5-base", "revision": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1", "weights": "model.safetensors"},
+    {"name": "HPSv3", "repo": "MizzenAI/HPSv3", "revision": "4f81e3e09edd82fe3c5f636444c721b592a735ca", "weights": "HPSv3.safetensors"},
+    {"name": "DINOv3-ViT-B-16", "repo": "facebook/dinov3-vitb16-pretrain-lvd1689m", "revision": "5931719e67bbdb9737e363e781fb0c67687896bc", "weights": "model.safetensors", "existing_only": true}
+  ],
+  "existing_groundingdino": {
+    "directory": "GroundingDINO-SwinT-OGC",
+    "source_revision": "856dde20aee659246248e20734ef9ba5214f5e44",
+    "weights": "groundingdino_swint_ogc.pth",
+    "text_encoder": "bert-base-uncased"
+  }
+}

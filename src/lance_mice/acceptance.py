@@ -10,13 +10,13 @@ import numpy as np
 from PIL import Image
 
 from .images import image_hash
-from .protocol import LEGACY_PROTOCOL_VERSION, PROTOCOL_VERSION, derive_seed, protocol_manifest
+from .protocol import LEGACY_PROTOCOL_VERSION, PROTOCOL_VERSION, CHAT_PROTOCOL_VERSION, derive_seed, protocol_manifest
 from .runner import write_json
 
 
-def validate_run(root: Path) -> dict:
+def validate_run(root: Path, *, sessions=None, validate_attention_files=True) -> dict:
     run = json.loads((root / "run.json").read_text())
-    sessions = run["samples"]
+    sessions = run["samples"] if sessions is None else sessions
     result = {}
     for session_id, instructions in sessions:
         folder = root / session_id
@@ -31,7 +31,7 @@ def validate_run(root: Path) -> dict:
             if row["output_hash"] != pixels_hash or row["input_hashes"] != previous:
                 raise ValueError(f"Image history hash mismatch: {path}")
             proto, backend = row["protocol"], row["backend"]
-            if (proto["version"] not in {PROTOCOL_VERSION, LEGACY_PROTOCOL_VERSION} or proto["image_count"] != turn
+            if (proto["version"] not in {PROTOCOL_VERSION, CHAT_PROTOCOL_VERSION, LEGACY_PROTOCOL_VERSION} or proto["image_count"] != turn
                     or proto["instruction_count"] != turn or proto["target_count"] != 1):
                 raise ValueError(f"Protocol mismatch: {path}")
             if proto != protocol_manifest(instructions[:turn], version=proto["version"]):
@@ -66,9 +66,12 @@ def validate_run(root: Path) -> dict:
                 else ("text", x["role"], x["turn"], x["text"]) for x in positive]
             if actual_order != expected_order or row["instruction"] != instructions[turn-1]:
                 raise ValueError(f"Full interleaving or raw current instruction differs: {path}")
-            if run.get("attention"):
-                from .attention import validate_attention
+            if run.get("attention") and validate_attention_files:
                 observation = backend["attention"]
+                if observation["version"] == "target-token-region-stats-v1":
+                    from .attention_regions import validate_attention
+                else:
+                    from .attention import validate_attention
                 attention_file = folder / f"turn_{turn}.attention.npz"
                 if observation["file"] != attention_file.name or observation["branch"] != "positive":
                     raise ValueError("Attention artifact name or branch differs")

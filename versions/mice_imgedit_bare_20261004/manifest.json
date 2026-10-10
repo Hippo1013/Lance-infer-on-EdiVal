@@ -1,0 +1,84 @@
+{
+  "version": "mice_imgedit_bare_20261004",
+  "server": "a800_0",
+  "server_source": "/home/chs/exp0_attention/Lance-infer-on-EdiVal",
+  "scope": "Exact source identity for historical experiment; no experimental data",
+  "files": {
+    "pyproject.toml": {
+      "sha256": "235238a6c6897f3c39f378cf80a887a71f1e9dcaae3ca3331cdfa197955bb12c",
+      "local_source": "versions/mice_imgedit_bare_20261004/pyproject.toml"
+    },
+    "scripts/bare_acceptance.py": {
+      "sha256": "793dd1521f9b66567b3fdbd025a5af194df1b0a58ca13764a113e9ce99f57d45",
+      "local_source": "scripts/bare_acceptance.py"
+    },
+    "scripts/full_imgedit_job.py": {
+      "sha256": "2ab06d73431a5f796935901404f5136d4b1cc2cdf5c58fada555a4b3d5d42538",
+      "local_source": "scripts/full_imgedit_job.py"
+    },
+    "scripts/full_mice_job.py": {
+      "sha256": "0c5caf138a06c5cafe61db99c6ba4561634fd6e889a66135bb581e16b595810b",
+      "local_source": "scripts/full_mice_job.py"
+    },
+    "scripts/validate_mice_full.py": {
+      "sha256": "82d2944048707ae17e16a08e2adb072b5e64b37750c05f319611c98621c834fd",
+      "local_source": "scripts/validate_mice_full.py"
+    },
+    "src/lance_mice/__init__.py": {
+      "sha256": "a6b2ce11819bd1bb3c27be2246084597ae5dc22c94ebe11128cd2dd4f916c7e6",
+      "local_source": "src/lance_mice/__init__.py"
+    },
+    "src/lance_mice/acceptance.py": {
+      "sha256": "c6dfcc8fa0bff9fcb1dcdf98099a048a9a99ae1415b3586704dc2bcd97914570",
+      "local_source": "versions/mice_imgedit_bare_20261004/source/src/lance_mice/acceptance.py"
+    },
+    "src/lance_mice/attention.py": {
+      "sha256": "58f8589e49b305ca7ef84538ff9921f58df30d198cb89231de92007b263a136f",
+      "local_source": "src/lance_mice/attention.py"
+    },
+    "src/lance_mice/backend.py": {
+      "sha256": "d056090d1163e78faf9145b6b023e4b40862e79acd967a53c83f7def56cc09a0",
+      "local_source": "versions/mice_imgedit_bare_20261004/source/src/lance_mice/backend.py"
+    },
+    "src/lance_mice/dataset.py": {
+      "sha256": "224c3faea2d4089b0e181692a094cc14720fcbce9bd35fe1a1b84152f4bcc1c1",
+      "local_source": "versions/mice_imgedit_bare_20261004/src/lance_mice/dataset.py"
+    },
+    "src/lance_mice/images.py": {
+      "sha256": "b30f407dcd2afba9c7a6e0c10d27955d92f30ecddb3b727e49ad2004a74328e0",
+      "local_source": "src/lance_mice/images.py"
+    },
+    "src/lance_mice/imgedit.py": {
+      "sha256": "5f3feae099a43ef07e2a34ebd025b23f819a95e3484f4de9b3c535d00a7783ad",
+      "local_source": "src/lance_mice/imgedit.py"
+    },
+    "src/lance_mice/omni_pipeline.py": {
+      "sha256": "77208947be9cece8f22e20169422fe28edb8eaa8a8721c25a514d40040933069",
+      "local_source": "versions/mice_imgedit_bare_20261004/source/src/lance_mice/omni_pipeline.py"
+    },
+    "src/lance_mice/performance.py": {
+      "sha256": "72539860972886ff59690db663ea3318e0769ab8feec71a76d827bcd40369e18",
+      "local_source": "src/lance_mice/performance.py"
+    },
+    "src/lance_mice/protocol.py": {
+      "sha256": "749b76b4af036b2d88c942e8612bd2e2c91faf248f14bdb985acf4a885766cca",
+      "local_source": "versions/mice_imgedit_bare_20261004/source/src/lance_mice/protocol.py"
+    },
+    "src/lance_mice/runner.py": {
+      "sha256": "126c9b1dc6f97be208f483cfdd269dd3065ee3dec66f5667e977d42edc21c341",
+      "local_source": "versions/mice_imgedit_bare_20261004/src/lance_mice/runner.py"
+    },
+    "src/lance_mice/settings.py": {
+      "sha256": "e6c612a5dfd5b2b530b70b8893bcf0177a5d0caf39f1f75217ac148de6ff80c8",
+      "local_source": "versions/mice_imgedit_bare_20261004/src/lance_mice/settings.py"
+    },
+    "src/lance_mice/single_turn_probe.py": {
+      "sha256": "53833468e5ab1a0c60980738dff7b1fd5974e829ccb3788362d62acd1ffffc63",
+      "local_source": "src/lance_mice/single_turn_probe.py"
+    },
+    "src/lance_mice/text_artifact_probe.py": {
+      "sha256": "72a183dcadc095a854d06c29d9400568706ce0bc62dd435667ee6ea25721450e",
+      "local_source": "src/lance_mice/text_artifact_probe.py"
+    }
+  }
+}

@@ -4,7 +4,7 @@ import json
 from dataclasses import asdict, dataclass, fields
 from pathlib import Path
 
-from .protocol import HISTORY_EXPLANATION, MODEL_REVISION, OMNI_REVISION, PROTOCOL_VERSION, digest
+from .protocol import HISTORY_EXPLANATION, MODEL_REVISION, OMNI_REVISION, PROTOCOL_VERSION, CHAT_PROTOCOL_VERSION, digest
 
 
 @dataclass(frozen=True)
@@ -19,8 +19,14 @@ class Settings:
     resolution: int = 768
     seed: int = 42
     cache_mode: str = "none"
+    history_protocol: str = PROTOCOL_VERSION
+    attention_format: str = "target-group-mass-v1"
 
     def __post_init__(self):
+        if self.history_protocol not in {PROTOCOL_VERSION, CHAT_PROTOCOL_VERSION}:
+            raise ValueError("Unknown history protocol")
+        if self.attention_format not in {"target-group-mass-v1", "target-token-region-stats-v1", "target-token-region-stats-v2"}:
+            raise ValueError("Unknown attention format")
         if self.steps < 1 or self.timestep_shift <= 0 or self.cfg_text_scale < 1:
             raise ValueError("Invalid denoising settings")
         if self.cfg_img_scale != 1.0:
@@ -35,7 +41,12 @@ class Settings:
             raise ValueError("v1 fixes CFG renormalization to global/min=0")
 
     def identity(self) -> dict:
-        return {"settings": asdict(self), "protocol": PROTOCOL_VERSION,
+        values = asdict(self)
+        # Preserve the established bare/group run identity for old validators.
+        if self.history_protocol == PROTOCOL_VERSION and self.attention_format == "target-group-mass-v1":
+            values.pop("history_protocol")
+            values.pop("attention_format")
+        return {"settings": values, "protocol": self.history_protocol,
                 "history_explanation_hash": digest(HISTORY_EXPLANATION),
                 "omni_revision": OMNI_REVISION, "model_revision": MODEL_REVISION}
 

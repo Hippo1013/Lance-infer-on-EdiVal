@@ -1,8 +1,8 @@
 # MICE 评分工程验收
 
-## 当前配置状态
+## 历史验收身份
 
-2026-10-05 当前活动任务为 [Qwen单票v3](scoring-qwen-once.md)，输出 `outputs/scoring/full_qwen_once_pending_v3`，GPU0续跑，尚无全量终态。历史双裁判v2于同日启动后按用户阶段调整停止；2026-10-04配置更新时没有追加模型试评。下文12/120轮通过记录属于temperature=0的双裁判v1，不能作为当前v3全量完成或人工准确率的证据。
+本页记录双裁判v1的工程验收；最新六组评分与待审状态见 [六组结果](sixrun-results-20261007.md)。历史 [Qwen单票v3](scoring-qwen-once.md) 于2026-10-06完成720会话2160轮，输出 `outputs/scoring/full_qwen_once_pending_v3`，validation passed；31项人工补评及 [第一版汇总](mice-first-edition-results.md) 也已完成。历史双裁判v2于2026-10-05启动后按用户阶段调整停止；2026-10-04配置更新时没有追加模型试评。下文12/120轮通过记录属于temperature=0的双裁判v1，不能作为单票v3全量完成或人工准确率的证据。
 
 ## 验收范围
 
